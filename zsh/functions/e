@@ -1,0 +1,10 @@
+# `e` with no arguments opens the current directory with $EDITOR,
+# otherwise opens the given location
+
+function e() {
+	if [ $# -eq 0 ]; then
+	  "$EDITOR" .;
+	else
+		"$EDITOR" "$@";
+	fi;
+}

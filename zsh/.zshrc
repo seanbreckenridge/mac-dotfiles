@@ -35,7 +35,9 @@ then
 fi
 
 # load functions from ${ZDOTDIR}/functions
-autoload -Uz gi md
+for func in $(command ls -1 "${ZDOTDIR}/functions/"); do
+  autoload -Uz $func
+done
 
 # General aliases
 [ -f "${ZSH_CUSTOM}/.zsh_aliases" ] && source "${ZSH_CUSTOM}/.zsh_aliases"

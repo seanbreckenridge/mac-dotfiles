@@ -10,14 +10,16 @@ export ZDOTDIR="${DOTDIR}/zsh"
 export ZSH_CUSTOM="${ZDOTDIR}/custom"
 
 # locations for additional functions
-export fpath=( ${ZDOTDIR}/functions ${fpath[@]} )
+export fpath=( "${ZDOTDIR}/functions" ${fpath[@]} )
 
 # Path
-PATH=$PATH:/usr/local/bin:
-PATH=$PATH:$HOME/bin
-PATH=$PATH:$DOTDIR/bin
-PATH=$PATH:$DOTDIR/bin/wrappers
-PATH=$PATH:$HOME/.cargo/bin
+PATH="\
+/usr/local/bin:\
+${HOME}/bin:\
+${DOTDIR}/bin:\
+${DOTDIR}/bin/wrappers:\
+${HOME}/.cargo/bin:\
+${PATH}"
 export PATH
 
 # Editor
