@@ -27,8 +27,9 @@ defaults write com.apple.Finder FXPreferredViewStyle clmv
 # Show the ~/Library folder.
 chflags nohidden ~/Library
 
-# Set a really fast key repeat.
-defaults write NSGlobalDomain KeyRepeat -int 1
+# Set a fast key repeat.
+defaults write NSGlobalDomain KeyRepeat -int 2
+defaults read NSGlobalDomain InitialKeyRepeat -int 20
 
 # Set the Finder prefs for showing a few different volumes on the Desktop.
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
