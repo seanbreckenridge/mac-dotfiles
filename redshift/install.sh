@@ -11,7 +11,7 @@ fi
 osascript -e 'tell application "System Preferences" to quit'
 
 # check if redshift is already in login items
-if [[ ! $(osascript -e 'tell application "System Events" to get the name of every login item' | grep -q autoredshift) ]]; then
+if (( $(osascript -e 'tell application "System Events" to get the name of every login item' | grep autoredshift | wc -l) == 0)); then
   # add automator script to login items
   auto_redshift_app="${DOTDIR}/redshift/autoredshift.app"
   osascript -e "tell application \"System Events\" to make login item at end with properties {name:\"autoredshift\",path:\"${auto_redshift_app}\", hidden:false}"
