@@ -1,6 +1,7 @@
-# Source: https://github.com/AndrewSB/dotfiles/blob/master/zsh/functions/gi
 # https://www.gitignore.io/docs
 #
 # get standard gitignore files
+#
+# Source: https://github.com/AndrewSB/dotfiles/blob/master/zsh/functions/gi
 
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}

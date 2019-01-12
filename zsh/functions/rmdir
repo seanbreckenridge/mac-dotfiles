@@ -1,0 +1,9 @@
+# if a directory has a .DS_Store file, removes it
+# then calls rmdir
+
+function rmdir() {
+  rmdir_location=$(command which rmdir)
+  [[ -z "${rmdir_location}" ]] && echo "There is no binary rmdir installed" && return
+  find "$1" -name ".DS_Store" -delete
+  $rmdir_location "$1"
+}
