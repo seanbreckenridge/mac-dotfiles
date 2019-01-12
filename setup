@@ -5,10 +5,12 @@
 set -e
 cd "$DOTDIR"
 
-# find the installers and run them iteratively
-find . -iname install.sh -print0 | while IFS= read -r -d $'\0' installer; do
-  sh -c "${installer}"
-done
+# call these in a defined order
+sh -c ./zsh/install.sh
+sh -c ./git/install.sh
+sh -c ./homebrew/install.sh
+sh -c ./python3/install.sh
+sh -c ./redshift/install.sh
 
 # will prompt user asking if they want to reset mac defaults
 ${DOTDIR}/bin/set_mac_defaults
