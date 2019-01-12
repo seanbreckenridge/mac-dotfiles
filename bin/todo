@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# Creates a todo on the Desktop
+#
+touch ~/Desktop/"$*"

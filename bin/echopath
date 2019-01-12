@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+# prints everything on $PATH seperated by newlines
+
+echo "$PATH" | tr ":" "\n"

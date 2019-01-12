@@ -1,0 +1,47 @@
+cask_args appdir: '/Applications'
+
+# Taps
+tap 'caskroom/cask'
+tap 'caskroom/eid'
+tap 'caskroom/fonts'
+tap 'caskroom/versions'
+tap 'homebrew/bundle'
+
+# Binaries
+brew 'ack'
+brew 'coreutils'
+brew 'grc'
+brew 'git'
+brew 'imagemagick'
+brew 'figlet'
+brew 'jp2a'
+brew 'libcaca', args: ['with-imlib2']
+brew 'openssl'
+brew 'readline'
+brew 'trash'
+brew 'grep'
+brew 'mas'
+brew 'tree'
+brew 'unrar'
+brew 'wget'
+brew 'redshift'
+brew 'yarn'
+brew 'youtube-dl'
+brew 'python3'
+brew 'ffmpeg'
+
+# Development
+brew 'php'
+brew 'mysql'
+brew 'node'
+
+# Apps
+cask 'atom'
+cask 'handbrake'
+cask 'slack'
+cask 'transmission'
+cask 'chromedriver'
+
+# Mac App Store
+mas 'Keynote', id: 409183694
+mas 'The Unarchiver', id: 425424353

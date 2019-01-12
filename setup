@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+# Run all dotfiles installers.
+
+set -e
+cd "$DOTDIR"
+
+# find the installers and run them iteratively
+find . -iname install.sh -print0 | while IFS= read -r -d $'\0' installer; do
+  sh -c "${installer}"
+done
+
+# will prompt user asking if they want to reset mac defaults
+${DOTDIR}/bin/set_mac_defaults

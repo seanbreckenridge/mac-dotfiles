@@ -1,0 +1,46 @@
+#!/bin/bash
+#
+# script that creates bash wrappers for scripts; puts scripts on your PATH
+#
+# Provide the location of the file you wish to make a wrapper for,
+# followed by the name of the wrapper, and then a command to run
+# the script with, if applicable
+#
+# e.g. wrapper bin/project/script_name.ext script_name
+# e.g. wrapper bin/project/script_name.py script_name python3
+
+set -e
+
+this_dir=$(dirname "$0")
+
+# check for help arg or if user didnt supply at least two args
+if [[ "$1" == "-h" || "$1" == "--help" || -z "$2" ]]; then
+  echo -e "Provide the location of the file you wish to make a wrapper for, followed by the name of the wrapper, and then a command to run the script with, if applicable"
+  echo -e "e.g. wrapper bin/project/script_name.ext script_name"
+  echo -e "e.g. wrapper bin/project/script_name.py script_name python3"
+  exit 1
+fi
+
+script_location="${PWD}/${1}"
+
+if [ ! -f "$script_location" ]; then
+  printf "Source file %s does not exist.\n" $1
+  exit 1
+fi
+
+wrapper_location="${this_dir}/${2}"
+
+if [ -f "$wrapper_location" ]; then
+  printf "A wrapper at %s already exists.\n" $wrapper_location
+  exit 1
+fi
+
+# write to wrapper file
+echo "#!/usr/bin/env bash" >> "$wrapper_location"
+if [ ! -z "$3" ]; then
+    printf "%s " $3 >> "$wrapper_location"
+fi
+printf "%s %s\n" $script_location '"$@"' >> "$wrapper_location"
+chmod +x "$wrapper_location"
+
+printf "Created wrapper '%s' successfully.\n" $(basename "$wrapper_location")

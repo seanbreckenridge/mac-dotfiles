@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+#
+# searches for a tv show on 'trakt', opens search results in
+# your default browser
+#
+# e.g. tvsearch the office
+
+import sys
+import webbrowser
+from urllib.parse import urlencode
+
+search_string = " ".join(sys.argv[1:]).strip()
+webbrowser.open_new_tab("https://trakt.tv/search/shows?{}".format(urlencode({'query': search_string, 'utf8': '✓'})))

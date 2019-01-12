@@ -1,0 +1,28 @@
+# Mac
+
+.DS_Store
+.DS_Store?
+.DS_Store
+.Spotlight-V100
+.Trashes
+
+# Windows
+
+Thumbs.db
+Desktop.ini
+
+# zsh
+
+/zsh/.zsh_history
+/zsh/custom/.personal_aliases
+.zcompdump*
+
+# wrappers
+
+/bin/wrappers/*
+!/bin/wrappers/wrapper
+
+# themes/fonts
+
+/zsh/custom/themes/*
+/zsh/custom/fonts/*

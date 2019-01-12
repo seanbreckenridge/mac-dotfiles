@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+# after downloading a video with youtube-dl, open it
+
+youtube-dl "$@" --exec 'open {}'
