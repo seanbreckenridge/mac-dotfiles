@@ -11,5 +11,13 @@ if [ ! -f ~/.hushlogin ]; then
   echo -e "This stops the 'Last Login' message when you open a new terminal window." > ~/.hushlogin
 fi
 
+if [ ! -d ~/bin ]; then
+  mkdir ~/bin
+fi
+
+if [ ! -f ~/bin/dotfiles ]; then
+  ln -s ~/dotfiles ~/bin
+fi
+
 echo -e "› Installing zsh theme prompt"
 npm install --global pure-prompt
