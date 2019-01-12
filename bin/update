@@ -10,5 +10,5 @@ ${DOTDIR}/python3/install.sh 2>&1
 
 if [[ $(uname -s) == "Darwin" ]]; then
   echo "› mac softwareupdate"
-  ${DOTDIR}/macos/install.sh 2>&1
+  ${DOTDIR}/macos/update.sh 2>&1
 fi
