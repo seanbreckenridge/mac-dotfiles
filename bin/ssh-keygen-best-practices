@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+# Creates a good ssh key
+#
+# Source: https://security.stackexchange.com/a/144044
+#
+# scheme: rsa
+# bits: 4096
+# OpenSSH format
+# 100 KDF (key derivation function) rounds. Higher numbers result in slower
+#   passphrase verification and increased resistance to brute-force
+#   password cracking (should the keys be stolen).
+
+ssh-keygen -t rsa -b 4096 -o -a 100
