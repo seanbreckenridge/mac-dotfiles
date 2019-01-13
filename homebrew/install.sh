@@ -22,11 +22,16 @@ then
   fi
 fi
 
-echo "› tapping Homebrew/bundle"
-brew tap Homebrew/bundle
+echo "› tapping..."
+brew tap 'Homebrew/bundle'
+brew tap 'caskroom/cask'
+brew tap 'caskroom/fonts'
+brew tap 'caskroom/versions'
 echo "› brew update && brew upgrade"
 brew update && brew upgrade
 echo "› Brewfile"
 brew bundle --file=$HOMEBREW_BREWFILE
+echo "› upgrading casks"
+brew cask upgrade
 
 exit 0

@@ -1,12 +1,5 @@
 cask_args appdir: '/Applications'
 
-# Taps
-tap 'caskroom/cask'
-tap 'caskroom/eid'
-tap 'caskroom/fonts'
-tap 'caskroom/versions'
-tap 'homebrew/bundle'
-
 # Binaries
 brew 'cask'
 brew 'htop'
@@ -34,20 +27,61 @@ brew 'yarn'
 brew 'youtube-dl'
 brew 'python3'
 brew 'ffmpeg'
-
-# Development
 brew 'php'
 brew 'mysql'
 brew 'node'
 
 # Apps
+
+## Code
 cask 'atom'
-cask 'handbrake'
-cask 'slack'
-cask 'transmission'
 cask 'chromedriver'
+cask 'github'
+cask 'mysqlworkbench'
+
+## Social
+cask 'slack'
 cask 'discord'
+cask 'orangered' # reddit notifier
+cask 'zoomus'
+
+## Media
+cask 'handbrake'
+cask 'vlc'
+cask 'spotify'
+cask 'simple-comic'
+
+## Utilities
+cask 'transmission' # torrent client
+cask 'alfred' # alternative to spotlight
+cask 'applepi-baker' # burns rasperry pi
+cask 'google-backup-and-sync'
+cask 'cyberduck' # ftp
+cask 'daisydisk' # visualizes volumes
+cask 'balenaetcher' # for USB boot drive creation
+cask 'flycut' # clipboard manager
+cask 'soundflower' # redirect sound output
+cask 'speedify' # VPN
+cask 'puush' # uploads screenshots
+cask 'virtualbox' # VM
+cask 'vnc-viewer' # GUI for raspberry pi
+
+## Games
+cask 'minecraft'
+cask 'openemu' # emulator
+cask 'steam'
+cask 'battle-net'
+cask 'hstracker'
+
+## Browsers
+cask 'google-chrome'
+cask 'firefox'
+cask 'opera'
+cask 'tor-browser'
 
 # Mac App Store
-mas 'Keynote', id: 409183694
 mas 'The Unarchiver', id: 425424353
+mas "Bandwidth+", id: 490461369
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
