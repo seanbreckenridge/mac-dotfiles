@@ -1,5 +1,16 @@
-#!/bin/bash
+#!/bin/zsh
 #
 # opens autoredshift (look at ~/dotfiles/redshift/README.md)
 
-open ${DOTDIR}/redshift/autoredshift.app
+open_loc=open
+# resolve open command location
+if [ ! $(uname -s) = 'Darwin' ]; then
+ if grep -q Microsoft /proc/version; then
+   # Ubuntu on Windows using the Linux subsystem
+   open_loc=explorer.exe
+ else
+   open_loc=xdg-open
+ fi
+fi
+
+$open_loc ${DOTDIR}/redshift/autoredshift.app
