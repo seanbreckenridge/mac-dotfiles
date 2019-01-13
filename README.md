@@ -10,7 +10,7 @@ My `dotfiles` directory sits at `~/dotfiles`, each directory includes an relevan
 ### installation
 
     cd # go home
-    curl https://raw.githubusercontent.com/seanbreckenridge/dotfiles/56a033c187991a72d53d80f714d2489e206e94ae/pre-setup > pre-setup
-    bash pre-setup
+    curl https://raw.githubusercontent.com/seanbreckenridge/dotfiles/master/pre-setup > pre-setup
+    bash -c pre-setup
     git clone https://github.com/seanbreckenridge/dotfiles
     ./dotfiles/setup
