@@ -11,6 +11,12 @@
 Thumbs.db
 Desktop.ini
 
+# Emacs
+
+*~
+\#*\#
+.\#*
+
 # zsh
 
 /zsh/.zsh_history
