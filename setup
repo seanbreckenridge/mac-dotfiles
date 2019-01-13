@@ -3,16 +3,6 @@
 # Run all dotfiles installers.
 
 
-# Remember to:
-#
-# Change your defualt shell
-#
-# chsh -s $(which zsh)
-#
-# Install oh-my-zsh
-#
-# sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 set -e
 if [[ ! "$PWD" == "${HOME}/dotfiles" ]]; then
   cd "${HOME}/dotfiles"
