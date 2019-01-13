@@ -16,6 +16,7 @@ bash -c ./git/install.sh
 bash -c ./python3/install.sh
 bash -c ./redshift/install.sh
 bash -c ./atom/install.sh
+bash -c ./chrome_extensions/install.sh
 
 # will prompt user asking if they want to reset mac defaults
 ${DOTDIR}/bin/set_mac_defaults
