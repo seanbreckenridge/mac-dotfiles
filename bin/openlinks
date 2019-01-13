@@ -11,12 +11,15 @@ import webbrowser
 print("Enter [or Paste] one or more links:")
 
 while True:
-    x = input()
-    if x.strip().lower() in ['q', 'quit']:
+    try:
+        x = input()
+        if x.strip().lower() in ['q', 'quit']:
+            sys.exit(1)
+        for line in x.split("\s*\n\s*"):
+            link = urlparse(line)
+            if link.scheme.strip(): # checks if link is valid
+                webbrowser.open_new_tab(line)
+            else:
+                print("Could not parse: {}".format(line), file=sys.stderr)
+    except (EOFError, KeyboardInterrupt):
         sys.exit(1)
-    for line in x.split("\s*\n\s*"):
-        link = urlparse(line)
-        if link.scheme.strip(): # checks if link is valid
-            webbrowser.open_new_tab(line)
-        else:
-            print("Could not parse: {}".format(line))
