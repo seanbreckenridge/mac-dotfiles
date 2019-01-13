@@ -26,3 +26,13 @@ Desktop.ini
 
 /zsh/custom/themes/*
 /zsh/custom/fonts/*
+
+# atom
+
+/atom/atom/blob-store
+/atom/atom/compile-cache
+/atom/atom/recovery
+/atom/atom/storage
+/atom/atom/.apm
+/atom/.installed
+
