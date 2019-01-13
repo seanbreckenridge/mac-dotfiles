@@ -28,7 +28,7 @@ else
   echo -e "\033[0;31mDid not find corresponding SSH key. Add it by doing:\nssh-add ~/.ssh/id_name\n\033[0m"
 fi
 
-git config --global core.editor atom
+git config --global core.editor nano
 
 echo -e "› Finished GitHub configuration:"
 # print configuration
