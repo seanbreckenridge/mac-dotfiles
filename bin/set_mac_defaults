@@ -3,8 +3,8 @@
 # Set macOS defaults
 if [[ $(uname -s) == "Darwin" ]]; then
   echo -e "› macos/set-defaults.sh changes a bunch of settings to make macOS more usable and then restarts affected applications."
-  printf "› execute set mac defaults file"
-  read -p "(y/n)? " resp
+  printf "› execute set mac defaults file "
+  read -p -t 15 "(y/n)? " resp # timeout after 15 seconds
   case "$resp" in
     y|Y )
       echo "› setting mac defaults"
