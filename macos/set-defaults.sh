@@ -1,4 +1,5 @@
-
+#!/bin/bash
+#
 # Sets reasonable macOS defaults.
 #
 # Sources:
