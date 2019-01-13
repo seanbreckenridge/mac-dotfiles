@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+# opens autoredshift (look at ~/dotfiles/redshift/README.md)
+
+open ${DOTDIR}/redshift/autoredshift.app
