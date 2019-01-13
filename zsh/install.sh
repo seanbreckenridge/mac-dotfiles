@@ -1,9 +1,20 @@
 #!/bin/bash
 
+echo "› setting up zsh environment"
+
+# make sure original oh-my-zsh files are removed
+original_files=("${HOME}/.zshenv" "${HOME}/.zshrc" "${HOME}/.zsh_history")
+
+for file in "${original_files[@]}"; do
+  if [ -f "$file" ]; then
+    rm "$file"
+  fi
+done
+
+DOTDIR="${HOME}/dotfiles"
+
 if [ ! -f ~/.zshenv ]; then
   ln -s ${DOTDIR}/zsh/.zshenv ~/.zshenv
-else
-  echo "› ~/.zshenv symlink already exists"
 fi
 
 # hush login
@@ -15,9 +26,6 @@ if [ ! -d ~/bin ]; then
   mkdir ~/bin
 fi
 
-if [ ! -f ~/bin/dotfiles ]; then
+if [ ! -d ~/bin/dotfiles ]; then
   ln -s ~/dotfiles ~/bin
 fi
-
-echo -e "› Installing zsh theme prompt"
-npm install --global pure-prompt
