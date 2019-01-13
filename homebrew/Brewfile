@@ -8,6 +8,11 @@ tap 'caskroom/versions'
 tap 'homebrew/bundle'
 
 # Binaries
+brew 'cask'
+brew 'htop'
+brew 'nmap'
+brew 'npm'
+brew 'node'
 brew 'ack'
 brew 'coreutils'
 brew 'grc'
