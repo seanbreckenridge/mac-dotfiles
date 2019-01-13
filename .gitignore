@@ -22,11 +22,6 @@ Desktop.ini
 /bin/wrappers/*
 !/bin/wrappers/wrapper
 
-# themes/fonts
-
-/zsh/custom/themes/*
-/zsh/custom/fonts/*
-
 # atom
 
 /atom/atom/blob-store
