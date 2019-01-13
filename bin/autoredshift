@@ -13,4 +13,4 @@ if [ ! $(uname -s) = 'Darwin' ]; then
  fi
 fi
 
-$open_loc ${DOTDIR}/redshift/autoredshift.app
+$open_loc "${DOTDIR}/redshift/autoredshift.app"

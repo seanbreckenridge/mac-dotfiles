@@ -8,7 +8,7 @@ if [[ $(uname -s) == "Darwin" ]]; then
   case "$resp" in
     y|Y )
       echo "› setting mac defaults"
-      ${DOTDIR}/macos/set-defaults.sh
+      "${DOTDIR}/macos/set-defaults.sh"
       ;;
     n|N ) ;;
     * ) printf "Invalid response (%s). Run 'set_mac_defaults' and use (y/n)" $resp

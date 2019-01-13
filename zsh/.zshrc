@@ -25,7 +25,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=()
 
-source $ZSH/oh-my-zsh.sh
+source "$ZSH/oh-my-zsh.sh"
 
 # https://github.com/holman/dotfiles/blob/master/system/grc.zsh
 # GRC colorizes nifty unix tools all over the place

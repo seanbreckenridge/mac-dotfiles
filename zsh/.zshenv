@@ -35,7 +35,7 @@ export PAGER=less
 # history file for zsh
 export HISTFILE="${ZDOTDIR}/.zsh_history"
 
-# Increase Bash history size. Allow 32³ entries; the default is 500.
+# Increase history size. Allow 32³ entries; the default is 500.
 export HISTSIZE='32768';
 
 # Omit duplicates and commands that begin with a space from history.

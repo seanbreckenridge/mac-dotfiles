@@ -30,7 +30,7 @@ brew tap 'caskroom/versions'
 echo "› brew update && brew upgrade"
 brew update && brew upgrade
 echo "› Brewfile"
-brew bundle --file=$HOMEBREW_BREWFILE
+brew bundle --file="$HOMEBREW_BREWFILE"
 echo "› upgrading casks"
 brew cask upgrade
 
