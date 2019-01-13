@@ -46,6 +46,7 @@ cask 'handbrake'
 cask 'slack'
 cask 'transmission'
 cask 'chromedriver'
+cask 'discord'
 
 # Mac App Store
 mas 'Keynote', id: 409183694
