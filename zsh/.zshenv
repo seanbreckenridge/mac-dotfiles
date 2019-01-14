@@ -17,7 +17,7 @@ PATH="\
 /usr/local/bin:\
 ${HOME}/bin:\
 ${DOTDIR}/bin:\
-${DOTDIR}/bin/wrappers:\
+${DOTDIR}/wrappers:\
 ${HOME}/.cargo/bin:\
 ${PATH}"
 export PATH
