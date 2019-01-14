@@ -1,7 +1,29 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 #
-# Creates a todo on the Desktop
-#
-# $ZDOTDIR/.zlogin lists these when you open a new shell
+# describe a task after 'todo' to create a todo on the Desktop
+# 
+# call 'todo --list' to list current todos
 
-echo 'TODO' > ~/Desktop/"$*"
+
+if [[ "$1" == "--list" ]]; then
+  todo_array=()
+  find "${HOME}/Desktop" -maxdepth 1 -type f -print0 | while IFS= read -r -d $'\0' file
+  do
+      if (( $(awk 'FNR == 1 {found = /^TODO/}; found' "${file}" | wc -c) > 0 )); then
+        todo_array+=("$file")
+      fi
+  done
+  
+  if (( ${#todo_array[*]} > 0 )); then # if there are todos
+    printf "Tasks todo...\n\n"
+    for todo in $todo_array; do
+      echo -en "\\t📝 "
+      echo -e $(basename "$todo")
+    done
+  fi
+elif (( ${+1} )); then # if argument is not empty
+  echo 'TODO' > ~/Desktop/"$*"
+  echo "created ${*} on the Desktop"
+else
+  echo "run 'todo --list' to list the current todos, or describe a task after 'todo'"
+fi
