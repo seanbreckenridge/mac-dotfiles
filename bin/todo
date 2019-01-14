@@ -2,4 +2,6 @@
 #
 # Creates a todo on the Desktop
 #
-touch ~/Desktop/"$*"
+# $ZDOTDIR/.zlogin lists these when you open a new shell
+
+echo 'TODO' > ~/Desktop/"$*"
