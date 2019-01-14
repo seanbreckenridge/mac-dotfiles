@@ -7,6 +7,7 @@
 #
 # Source: https://github.com/holman/dotfiles/blob/master/homebrew/install.sh
 
+set -e
 # Check for Homebrew
 if test ! $(which brew)
 then
@@ -33,5 +34,16 @@ echo "› Brewfile"
 brew bundle --file="$HOMEBREW_BREWFILE"
 echo "› upgrading casks"
 brew cask upgrade
-
-exit 0
+echo "› configuring shells"
+if [[ $(which zsh) == "/bin/zsh" ]]; then
+  # /usr/local/bin is first on the path in .zshenv
+  # /usr/bin/env should now use brew installed versions
+  hash -r
+fi
+# add brew installed zsh version to shells, use it by default
+if (( $(grep -c "/usr/local/bin/zsh" /etc/shells) == 0 )); then
+  sudo sh -c 'echo /usr/local/bin/zsh >> /etc/shells'
+  chsh -s $(which zsh)
+else
+  echo "› shells have already been configured properly"
+fi

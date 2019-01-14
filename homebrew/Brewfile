@@ -1,6 +1,8 @@
 cask_args appdir: '/Applications'
 
 # Binaries
+brew 'bash'
+brew 'zsh'
 brew 'cask'
 brew 'htop'
 brew 'nmap'
@@ -46,10 +48,10 @@ cask 'orangered' # reddit notifier
 cask 'zoomus'
 
 ## Media
-cask 'handbrake'
-cask 'vlc'
+cask 'handbrake' # video encoding
+cask 'vlc' # media player
 cask 'spotify'
-cask 'simple-comic'
+cask 'simple-comic' # alternative to preview
 
 ## Utilities
 cask 'transmission' # torrent client
@@ -70,6 +72,7 @@ cask 'vnc-viewer' # GUI for raspberry pi
 cask 'minecraft'
 cask 'openemu' # emulator
 cask 'steam'
+# for hearthstone
 cask 'battle-net'
 cask 'hstracker'
 
