@@ -10,4 +10,3 @@ if [ ! -f ${DOTDIR}/atom/.installed ]; then
 else
   echo "› atom has already been symlinked"
 fi
-  

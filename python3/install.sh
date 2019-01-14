@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -e
 echo -e "› Upgading pip"
 pip3 install --upgrade --user pip setuptools wheel # upgrade pip
 echo -e "› Installing/Upgrading packages"

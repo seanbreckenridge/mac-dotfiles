@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -e
 echo "› Installing autoredshift..."
 if [[ ! $(uname -s) == "Darwin" ]]; then
   echo -e "› Not on mac, exiting..."
