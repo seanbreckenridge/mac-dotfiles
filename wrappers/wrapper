@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # script that creates bash wrappers for scripts; puts scripts on your PATH
 #
