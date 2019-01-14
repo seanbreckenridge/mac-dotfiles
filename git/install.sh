@@ -3,7 +3,6 @@
 # Sets global name and email config, default editor to atom, and checks
 # if you have an ssh key set
 
-set -e
 echo "› Github configuration..."
 
 # check for global name config

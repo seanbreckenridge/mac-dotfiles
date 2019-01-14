@@ -7,7 +7,6 @@
 #
 # Source: https://github.com/holman/dotfiles/blob/master/homebrew/install.sh
 
-set -e
 # Check for Homebrew
 if test ! $(which brew)
 then

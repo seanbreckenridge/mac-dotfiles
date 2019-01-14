@@ -1,6 +1,5 @@
 #!/bin/bash
 
-set -e
 echo "› setting up zsh environment"
 
 # make sure original oh-my-zsh files are removed
