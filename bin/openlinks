@@ -1,25 +1,20 @@
 #!/usr/bin/env python3
 
 # Waits for input, give one or more links as input
-# Opens link in default browser if they're valid
+# Opens link in default browser
 # input 'q' or 'quit' to quit
+#
+# can also pipe like `echo http://somelink.com | openlinks`
 
 import sys
-from urllib.parse import urlparse
 import webbrowser
-
-print("Enter [or Paste] one or more links:")
 
 while True:
     try:
-        x = input()
-        if x.strip().lower() in ['q', 'quit']:
-            sys.exit(1)
-        for line in x.split("\s*\n\s*"):
-            link = urlparse(line)
-            if link.scheme.strip(): # checks if link is valid
-                webbrowser.open_new_tab(line)
-            else:
-                print("Could not parse: {}".format(line), file=sys.stderr)
+        user_input = input()
+        for line in user_input.split("\s*\n\s*"):
+            if line.strip().lower() in ['q', 'quit']:
+                sys.exit(1)
+            webbrowser.open_new_tab(line)
     except (EOFError, KeyboardInterrupt):
         sys.exit(1)
