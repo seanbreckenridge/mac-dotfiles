@@ -8,4 +8,4 @@
 #
 # Modified from: https://github.com/AndrewSB/dotfiles/blob/master/zsh/functions/gi
 
-printf "%s\n" $(curl -L -s https://www.gitignore.io/api/"$@")
+curl -L -s https://www.gitignore.io/api/"$@"
