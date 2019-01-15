@@ -34,6 +34,10 @@ then
   source `brew --prefix`/etc/grc.bashrc
 fi
 
+# don't show % at end of partial lines
+setopt PROMPT_CR PROMPT_SP
+PROMPT_EOL_MARK=""
+
 # load functions from ${ZDOTDIR}/functions
 for func in $(command ls -1 "${ZDOTDIR}/functions/"); do
   autoload -Uz $func
