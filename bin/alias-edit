@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#
+# Opens the personal aliases file
+
+$EDITOR "${ZSH_CUSTOM}/.personal_aliases"
