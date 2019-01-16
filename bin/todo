@@ -1,7 +1,9 @@
 #!/usr/bin/env zsh
 #
 # describe a task after 'todo' to create a todo on the Desktop
-# 
+#
+# any file on the desktop that starts with 'TODO' is recognized as a todo
+#
 # call 'todo --list' to list current todos
 
 
@@ -23,7 +25,7 @@ if [[ "$1" == "--list" ]]; then
   fi
 elif (( ${+1} )); then # if argument is not empty
   echo 'TODO' > ~/Desktop/"$*"
-  echo "created ${*} on the Desktop"
+  echo "created '${*}' on the Desktop"
 else
   echo "run 'todo --list' to list the current todos, or describe a task after 'todo'"
 fi
