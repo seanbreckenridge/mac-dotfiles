@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#
+# Opens the current git repo in default browser
+#
+# Modified from: https://jasonneylon.wordpress.com/2011/04/22/opening-github-in-your-browser-from-the-terminal/
+
+giturl=$(git config --get remote.origin.url)
+if [ "$giturl" == "" ]
+  then
+   echo "Not a git repository or no remote.origin.url set"
+   exit 1;
+fi
+
+giturl=${giturl/git\@github\.com\:/https://github.com/}
+giturl=${giturl/\.git/\/tree/}
+branch="$(git symbolic-ref HEAD 2>/dev/null)" ||
+branch="(unnamed branch)"     # detached HEAD
+branch=${branch##refs/heads/}
+giturl=${giturl}${branch}
+openlinks <<< $giturl
