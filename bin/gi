@@ -3,9 +3,12 @@
 # https://www.gitignore.io/docs
 #
 # get standard gitignore files
-#
 # use `gi list` to list gitignore files
+#
+# prepends the output with the basic gitignore from git/basic_gitignore
 #
 # Modified from: https://github.com/AndrewSB/dotfiles/blob/master/zsh/functions/gi
 
-curl -L -s https://www.gitignore.io/api/"$@"
+cat "${DOTDIR}/git/basic_gitignore"
+echo -e '\n' # 2 newlines
+curl -s -L https://www.gitignore.io/api/"$@"
