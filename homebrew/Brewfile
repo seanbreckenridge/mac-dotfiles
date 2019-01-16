@@ -32,6 +32,7 @@ brew 'ffmpeg'
 brew 'php'
 brew 'mysql'
 brew 'node'
+brew 'p7zip' # 7zip
 
 # Apps
 
