@@ -1,6 +1,10 @@
 alias tree='tree -N'
 alias du='du -h'
 
+# use GNU commands
+alias head='colourify ghead'
+alias tail='colourify gtail'
+
 # Source: https://github.com/mathiasbynens/dotfiles/blob/master/.functions
 # Normalize `open` across Linux, macOS, and Windows.
 # This is needed to make the `o` function (see below) cross-platform.
