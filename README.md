@@ -2,7 +2,7 @@
 
 there are many `dotfiles`, but these are mine.
 
-My `dotfiles` directory sits at `~/dotfiles`, each directory includes an relevant `install.sh` file, you can run all of them by running [`./setup`](/setup).
+Note these are for mac. My `dotfiles` directory sits at `~/dotfiles`, each directory includes an relevant `install.sh` file, you can run all of them by running [`./setup`](/setup).
 
 [bin](/bin), [functions](/zsh/functions), and [redshift](/redshift) have the most interesting things here.
 
