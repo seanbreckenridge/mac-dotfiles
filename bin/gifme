@@ -12,6 +12,10 @@
 # e.g. gifme ~/Movies/your-favorite-movie.mp4 00:43:04 5
 # e.g. gifme ~/Movies/your-favorite-movie.mp4 01:04:02 10.5 25
 #
+# Note if you want to convert the entire duration for a video file to
+# a gif, you can provide a duration much higher than the length of the video
+# e.g. gifme ~/Movies/a-short-video.mkv 0 9999999 10
+#
 # requires 'imagemagick' and 'ffmpeg'
 #
 # Modified from: https://github.com/holman/dotfiles/blob/master/bin/movieme
@@ -64,4 +68,4 @@ printf "Converting %d frames to a gif...\n" $(ls -1 /tmp/gifme | wc -l)
 # delay - speed, determined by fps above
 # loop 0 - make gif repeat itself
 convert -delay $convert_delay -loop 0 /tmp/gifme/*.png "$output_filename"
-printf "Created %s successfully\n" $output_filename
+echo -e "Created ${output_filename} successfully"
