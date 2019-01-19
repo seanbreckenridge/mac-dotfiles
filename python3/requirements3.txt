@@ -12,7 +12,6 @@ giturlparse.py
 google-api-python-client
 lxml
 matplotlib
-mysqlclient
 numpy
 oauth2client
 prettytable

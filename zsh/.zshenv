@@ -15,6 +15,7 @@ export fpath=( "${ZDOTDIR}/functions" ${fpath[@]} )
 # Path
 PATH="\
 /usr/local/bin:\
+/home/linuxbrew/.linuxbrew/bin:\
 ${DOTDIR}/bin:\
 ${DOTDIR}/wrappers:\
 ${HOME}/.cargo/bin:\

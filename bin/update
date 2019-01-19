@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 #
-# updates brew, python, and anything from the mac app store
+# updates brew, python, and anything else from apt
+
+echo "› apt update && apt upgrade"
+sudo apt update && sudo apt upgrade
 
 echo "› updating brew"
 "${DOTDIR}/homebrew/install.sh" 2>&1

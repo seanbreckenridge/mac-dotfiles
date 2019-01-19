@@ -22,6 +22,8 @@ then
   fi
 fi
 
+sudo apt-get install build-essential
+
 echo "› tapping..."
 brew tap 'Homebrew/bundle'
 brew tap 'caskroom/cask'
