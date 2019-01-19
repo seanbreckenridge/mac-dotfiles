@@ -2,7 +2,9 @@
 
 there are many `dotfiles`, but these are mine.
 
-Note these are for mac. My `dotfiles` directory sits at `~/dotfiles`, each directory includes an relevant `install.sh` file, you can run all of them by running [`./setup`](/setup).
+This branch is for Linux Mint. If [setup](/setup) fails, shell and computer restarts may be required, specifically after changing your shell (computer restart) and installing LinuxBrew (exit and open a new shell)
+
+My `dotfiles` directory sits at `~/dotfiles`, each directory includes an relevant `install.sh` file, you can run all of them by running [`./setup`](/setup).
 
 [bin](/bin), [functions](/zsh/functions), and [redshift](/redshift) have the most interesting things here.
 
