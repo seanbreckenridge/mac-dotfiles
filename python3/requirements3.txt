@@ -8,6 +8,7 @@ bs4
 colorama
 discogs_client
 discord.py
+giturlparse.py
 google-api-python-client
 lxml
 matplotlib
