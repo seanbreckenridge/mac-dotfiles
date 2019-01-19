@@ -14,6 +14,7 @@ export fpath=( "${ZDOTDIR}/functions" ${fpath[@]} )
 
 # Path
 PATH="\
+/usr/local/opt/coreutils/libexec/gnubin:\ # use commands installed by 'brew install coreutils'
 /usr/local/bin:\
 ${DOTDIR}/bin:\
 ${DOTDIR}/wrappers:\
