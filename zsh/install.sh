@@ -25,7 +25,3 @@ fi
 if [ ! -d ~/bin ]; then
   mkdir ~/bin
 fi
-
-if [ ! -d ~/bin/dotfiles ]; then
-  ln -s "~/dotfiles" ~/bin
-fi
