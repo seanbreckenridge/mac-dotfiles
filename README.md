@@ -17,6 +17,7 @@ Notes:
 
     cd # go home
     curl https://raw.githubusercontent.com/seanbreckenridge/dotfiles/master/pre-setup > pre-setup
-    bash -c pre-setup
+    chmod +x ./pre-setup
+    bash -c ./pre-setup
     git clone https://github.com/seanbreckenridge/dotfiles
     ./dotfiles/setup
