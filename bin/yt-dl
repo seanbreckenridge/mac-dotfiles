@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#
+# cd into a folder (Downloads/Desktop), then youtube-dl
+
+if [ -d ~/Downloads ]; then
+  cd ~/Downloads
+elif [ -d ~/Desktop ]; then
+  cd ~/Desktop
+else
+  echo -e "Could not find ~/Downloads or ~/Desktop. Downloading in ${PWD}" 1>&2
+fi
+
+youtube-dl "$@"

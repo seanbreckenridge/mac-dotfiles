@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#
+# cd into a folder (Downloads/Desktop), then youtube-dl
+# downloading a video with youtube-dl, then open it
+
+${DOTDIR}/bin/yt-dl "$@" --exec 'open {}'
