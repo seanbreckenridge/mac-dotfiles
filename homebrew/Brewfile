@@ -41,6 +41,7 @@ cask 'atom'
 cask 'chromedriver'
 cask 'github'
 cask 'mysqlworkbench'
+cask 'texmaker'
 
 ## Social
 cask 'slack'
