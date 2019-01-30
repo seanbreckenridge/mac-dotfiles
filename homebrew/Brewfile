@@ -1,5 +1,3 @@
-cask_args appdir: '/Applications'
-
 # Binaries
 brew 'bash'
 brew 'cask'
@@ -28,5 +26,3 @@ brew 'python3'
 brew 'ffmpeg'
 brew 'node'
 brew 'p7zip' # 7zip
-
-cask 'atom'

@@ -26,14 +26,10 @@ sudo apt-get install build-essential
 
 echo "› tapping..."
 brew tap 'Homebrew/bundle'
-brew tap 'caskroom/cask'
-brew tap 'caskroom/versions'
 echo "› brew update && brew upgrade"
 brew update && brew upgrade
 echo "› Brewfile"
 brew bundle --file="$HOMEBREW_BREWFILE"
-echo "› upgrading casks"
-brew cask upgrade
 echo "› configuring shells"
 if [[ $(which zsh) == "/bin/zsh" ]]; then
   # /usr/local/bin is first on the path in .zshenv
