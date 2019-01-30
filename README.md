@@ -18,8 +18,10 @@ Notes:
 ### installation
 
     cd # go home
-    curl https://raw.githubusercontent.com/seanbreckenridge/dotfiles/master/pre-setup > pre-setup
+    sudo apt install curl git ruby
+    curl https://raw.githubusercontent.com/seanbreckenridge/dotfiles/linux-mint/pre-setup > pre-setup
     chmod +x ./pre-setup
     bash -c ./pre-setup
     git clone https://github.com/seanbreckenridge/dotfiles
+    git checkout linux-mint
     ./dotfiles/setup

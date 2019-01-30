@@ -3,7 +3,6 @@
 # Run all dotfiles installers.
 
 set -e
-sudo apt install ruby
 
 if [[ ! "$PWD" == "${HOME}/dotfiles" ]]; then
   cd "${HOME}/dotfiles"
