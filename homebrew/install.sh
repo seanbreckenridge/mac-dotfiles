@@ -27,7 +27,6 @@ sudo apt-get install build-essential
 echo "› tapping..."
 brew tap 'Homebrew/bundle'
 brew tap 'caskroom/cask'
-brew tap 'caskroom/fonts'
 brew tap 'caskroom/versions'
 echo "› brew update && brew upgrade"
 brew update && brew upgrade

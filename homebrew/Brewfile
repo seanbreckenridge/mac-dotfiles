@@ -28,3 +28,5 @@ brew 'python3'
 brew 'ffmpeg'
 brew 'node'
 brew 'p7zip' # 7zip
+
+cask 'atom'
