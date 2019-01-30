@@ -43,6 +43,8 @@ for func in $(command ls -1 "${ZDOTDIR}/functions/"); do
   autoload -Uz $func
 done
 
+eval `ssh-agent -s` > /dev/null
+
 # General aliases
 [ -f "${ZSH_CUSTOM}/.zsh_aliases" ] && source "${ZSH_CUSTOM}/.zsh_aliases"
 
