@@ -14,6 +14,7 @@ export fpath=( "${ZDOTDIR}/functions" ${fpath[@]} )
 
 # Path
 PATH="\
+/usr/local/opt/coreutils/libexec/gnubin:\
 /usr/local/bin:\
 /home/linuxbrew/.linuxbrew/bin:\
 ${DOTDIR}/bin:\

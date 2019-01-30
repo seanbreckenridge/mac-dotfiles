@@ -1,0 +1,24 @@
+#!/usr/bin/env zsh
+
+if [ -z "$1" ]; then
+  echo "Provide the file you wish to check the duration for after 'duration'"
+  exit 1
+fi
+
+seconds=$(ffprobe -i "$1" -show_entries format=duration -v quiet -of csv="p=0")
+if (( $seconds > 60 )); then
+  minutes=$(perl -E "say int(${seconds}/60)")
+  seconds=$(( $seconds % 60 ))
+  if (( $minutes > 60 )); then
+    hours=$(perl -E "say int(${minutes}/60)")
+    minutes=$(( $minutes % 60 ))
+    # print hours, minutes and seconds
+    echo -e "${hours}h:${minutes}m:${seconds%.*}s" # truncate decimal part on seconds
+  else
+    # print minutes and seconds
+    echo -e "${minutes}m:${seconds%.*}s"
+  fi
+else
+  # print seconds
+  echo -e "${seconds%.*}s"
+fi
