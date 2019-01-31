@@ -18,8 +18,9 @@ Notes:
 ### installation
 
     cd # go home
-    curl https://raw.githubusercontent.com/seanbreckenridge/dotfiles/master/pre-setup > pre-setup
-    chmod +x ./pre-setup
-    bash -c ./pre-setup
+    # install developer tools
+    xcode-select --install
+    # Install oh-my-zsh
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     git clone https://github.com/seanbreckenridge/dotfiles
     ./dotfiles/setup
