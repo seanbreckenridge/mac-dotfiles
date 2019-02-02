@@ -1,4 +1,6 @@
 #!/usr/bin/env zsh
+#
+# gives you the duration of a audio/video file given on command line.
 
 if [ -z "$1" ]; then
   echo "Provide the file you wish to check the duration for after 'duration'"
