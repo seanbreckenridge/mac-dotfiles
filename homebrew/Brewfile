@@ -63,7 +63,7 @@ cask 'google-backup-and-sync'
 cask 'cyberduck' # ftp
 cask 'daisydisk' # visualizes volumes
 cask 'balenaetcher' # for USB boot drive creation
-cask 'keepassx'
+cask 'keepassxc'
 cask 'megasync'
 cask 'flycut' # clipboard manager
 cask 'soundflower' # redirect sound output
