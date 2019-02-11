@@ -55,6 +55,7 @@ cask 'zoomus'
 ## Media
 cask 'handbrake' # video encoding
 cask 'vlc' # media player
+cask 'skitch' # simple image editor by evernote
 cask 'spotify'
 cask 'simple-comic' # alternative to preview
 
