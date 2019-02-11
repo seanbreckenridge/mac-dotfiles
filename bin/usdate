@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#
+# Prints the date in the US format, because I'm used to the European
+
+date +%m/%d/%y
