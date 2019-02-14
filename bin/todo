@@ -17,7 +17,7 @@ if [[ "$1" == "--list" ]]; then
   done
   
   if (( ${#todo_array[*]} > 0 )); then # if there are todos
-    printf "Tasks todo...\n\n"
+    printf "\n"
     for todo in $todo_array; do
       echo -en "\\t📝 "
       echo -e $(basename "$todo")
