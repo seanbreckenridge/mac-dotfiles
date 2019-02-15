@@ -27,3 +27,4 @@ speedtest-cli
 termcolor
 xlrd
 ndg-httpsclient
+bpython

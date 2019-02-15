@@ -36,6 +36,7 @@ brew 'node'
 brew 'p7zip' # 7zip
 brew 'duti'
 brew 'gradle'
+brew 'kakasi' # kanji translation
 
 # Apps
 
