@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-#
-# cd into a folder (Downloads/Desktop), then youtube-dl
-# after downloading the video, 
-# wait for the user to press enter, then open it
-
-${DOTDIR}/bin/yt-dl "$@" --exec 'read; open {}'

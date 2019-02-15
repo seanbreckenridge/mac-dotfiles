@@ -1,13 +1,48 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python3
 #
-# cd into a folder (Downloads/Desktop), then youtube-dl
+# Download a video using youtube-dl, and then do something with it
+# do yt-dl --help to see options
+# leftover arguments are passed to youtube-dl
 
-if [ -d ~/Downloads ]; then
-  cd ~/Downloads
-elif [ -d ~/Desktop ]; then
-  cd ~/Desktop
-else
-  echo -e "Could not find ~/Downloads or ~/Desktop. Downloading in ${PWD}" 1>&2
-fi
+import os
+import argparse
 
-youtube-dl "$@"
+parser = argparse.ArgumentParser(description="Download a video using youtube-dl, and then do something with it")
+parser.add_argument("--open", action="store_true", help="Open this video after it finishes downloading")
+parser.add_argument("--wait", action="store_true", help="After this video finishes downloading, wait for the user to hit enter, and then open it.")
+parser.add_argument("--name", help="Change the name from the default youtube-dl file to the passed name")
+dest = parser.add_mutually_exclusive_group()
+dest.add_argument("--downloads", action="store_true", default=True, help="Change download destination to ~/Downloads")
+dest.add_argument("--tmp", action="store_true", help="Download a video to the /tmp/ directory, it will be deleted on computer restart")
+args, unknownargs = parser.parse_known_args()
+
+# give youtube-dl leftover arguments
+youtube_dl = " ".join(["youtube-dl"] + unknownargs)
+
+# if we have to wait before opening, we should be opening
+if args.wait:
+    args.open = True
+
+# create absolute path to download directory
+dir = os.path.abspath(".")
+if args.tmp:
+    dir = os.path.abspath("/tmp")
+else:
+    dir = os.path.join(os.path.expanduser("~"), "Downloads")
+
+# if given a custom name, use it instead
+name = ""
+if args.name is not None and args.name.strip():
+    name = "-o '{}.%(ext)s'".format(args.name)
+
+# use youtube-dl's --exec flag to open the files once downloaded
+exec_str = ""
+if args.wait:
+    exec_str = "--exec \"echo 'Press \'enter/return\' to open...'; read; open {}\""
+elif args.open:
+    exec_str = '--exec "open {}"'
+
+youtube_dl = f"cd {dir}; {youtube_dl} {name} {exec_str}"
+
+# call youtube-dl with a system call
+os.system(youtube_dl)

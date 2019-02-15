@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-#
-# after downloading a video with youtube-dl,
-# wait for user to press enter, then open it
-
-youtube-dl "$@" --exec 'read; open {}'
