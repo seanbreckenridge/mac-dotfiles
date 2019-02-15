@@ -26,3 +26,4 @@ setuptools
 speedtest-cli
 termcolor
 xlrd
+ndg-httpsclient
