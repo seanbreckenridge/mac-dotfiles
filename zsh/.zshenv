@@ -16,6 +16,7 @@ export fpath=( "${ZDOTDIR}/functions" ${fpath[@]} )
 PATH="\
 /usr/local/opt/coreutils/libexec/gnubin:\
 /usr/local/bin:\
+${HOME}/Library/Python/3.7/bin:\
 ${DOTDIR}/bin:\
 ${DOTDIR}/wrappers:\
 ${HOME}/.cargo/bin:\
