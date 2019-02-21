@@ -1,5 +1,15 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python3
 #
 # Prints the date in the US format, because I'm used to the European
 
-date +%m/%d/%y
+"""Usage: usdate [--dash]"""
+
+import subprocess
+import docopt
+
+args = docopt.docopt(__doc__)
+
+if args["--dash"]:
+    subprocess.run("date +%m-%d-%y", shell=True)
+else:
+    subprocess.run("date +%m/%d/%y", shell=True)
