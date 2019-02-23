@@ -29,3 +29,5 @@ xlrd
 ndg-httpsclient
 bpython
 docopt
+pipenv
+toml

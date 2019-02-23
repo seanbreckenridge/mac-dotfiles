@@ -37,6 +37,7 @@ brew 'p7zip' # 7zip
 brew 'duti'
 brew 'gradle'
 brew 'kakasi' # kanji translation
+brew 'pyenv'
 
 # Apps
 
@@ -46,6 +47,7 @@ cask 'chromedriver'
 cask 'github'
 cask 'mysqlworkbench'
 cask 'java'
+cask 'phantomjs'
 
 ## Social
 cask 'slack'
