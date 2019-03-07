@@ -38,6 +38,7 @@ brew 'duti'
 brew 'gradle'
 brew 'kakasi' # kanji translation
 brew 'pyenv'
+brew 'rdfind' # find duplicate files
 
 # Apps
 
