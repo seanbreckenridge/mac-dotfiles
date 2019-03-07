@@ -36,3 +36,6 @@ Desktop.ini
 /atom/atom/storage
 /atom/atom/.apm
 /atom/.installed
+/atom/atom/packages
+/atom/atom/.node-gyp
+/atom/atom/kite-config.json
