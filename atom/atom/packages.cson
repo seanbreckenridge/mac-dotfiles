@@ -1,4 +1,6 @@
 'packages': [
+  'kite'
+  'autocomplete-python'
   'latex'
   'autocomplete'
   'cucumber'

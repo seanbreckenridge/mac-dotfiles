@@ -12,6 +12,7 @@
       ".DS_Store"
     ]
     telemetryConsent: "limited"
+    useTreeSitterParsers: false
   editor:
     autoIndentOnPaste: false
     fontSize: 17
@@ -26,6 +27,8 @@
   "go-plus":
     goPath: "/Users/stefan/go"
     showPanel: false
+  kite:
+    showWelcomeNotificationOnStartup: false
   linter: {}
   "linter-eslint":
     useGlobalEslint: true
@@ -51,5 +54,7 @@
   "theme-switcher":
     syntaxThemeOne: "one-dark-syntax"
     syntaxThemeTwo: "one-light-syntax"
+  "tree-view":
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
