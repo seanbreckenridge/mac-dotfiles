@@ -6,7 +6,7 @@ set -e
 
 if [[ $(uname -s) == "Darwin" ]]; then
   echo -e "› macos/update.sh installs update from the Mac App Store."
-  printf "› install updates? "
+  printf "› install updates? (y/n) "
   read -t 15 resp # timeout after 15 seconds
   case "$resp" in
     y|Y )
@@ -14,7 +14,7 @@ if [[ $(uname -s) == "Darwin" ]]; then
       sudo softwareupdate -i -a
       ;;
     n|N ) ;;
-    * ) printf "Invalid response (%s). Run 'set_mac_defaults' and use (y/n)" $resp
+    * ) printf "Invalid response (%s). Use (y/n)" $resp
   esac
 else
   echo -e "› Not on macOS, skipping macos"
