@@ -25,3 +25,11 @@ fi
 if [ ! -d ~/bin ]; then
   mkdir ~/bin
 fi
+
+# need to add ruby before system ruby, cant do this in .zshenv since
+# mac will mess up the paths
+# see here: https://github.com/clvv/oh-my-zsh/blob/master/README.md#mac-os-x
+if [ -f /etc/paths ]; then
+  sudo rm /etc/paths
+  sudo ln "${DOTDIR}/zsh/.etcpaths" /etc/paths
+fi

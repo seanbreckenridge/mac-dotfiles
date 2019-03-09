@@ -52,6 +52,11 @@ export HOMEBREW_BREWFILE="${DOTDIR}/homebrew/Brewfile"
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
 export PYTHONIOENCODING='UTF-8';
 
+# rbenv variables
+export RBENV_ROOT="/usr/local/opt/rbenv"
+export GEM_HOME="/usr/local/opt/gems"
+export GEM_PATH="/usr/local/opt/gems"
+
 # source order:
 # .zshenv → [.zprofile if login] → [.zshrc if interactive] → [.zlogin if login] → [.zlogout sometimes]. –
 

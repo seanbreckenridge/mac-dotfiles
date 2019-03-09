@@ -39,6 +39,9 @@ brew 'gradle'
 brew 'kakasi' # kanji translation
 brew 'pyenv'
 brew 'rdfind' # find duplicate files
+brew 'ruby'
+brew 'rbenv'
+brew 'ruby-build'
 
 # Apps
 
