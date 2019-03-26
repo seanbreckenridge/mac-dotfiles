@@ -1,10 +1,13 @@
 "*":
   "autocomplete-plus":
     confirmCompletion: "tab always, enter when suggestion explicitly selected"
+  "autocomplete-python":
+    useKite: false
   core:
     disabledPackages: [
       "linter-eslint"
       "whitespace"
+      "kite"
     ]
     ignoredNames: [
       ".git"
