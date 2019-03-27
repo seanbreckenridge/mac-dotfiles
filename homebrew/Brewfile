@@ -15,7 +15,7 @@ brew 'git'
 brew 'imagemagick'
 brew 'figlet'
 brew 'jp2a'
-brew 'libcaca', args: ['with-imlib2']
+brew 'libcaca'
 brew 'openssl'
 brew 'speedtest-cli'
 brew 'readline'
@@ -35,6 +35,7 @@ brew 'mysql'
 brew 'node'
 brew 'p7zip' # 7zip
 brew 'duti'
+cask 'java' # java is required to install gradle
 brew 'gradle'
 brew 'kakasi' # kanji translation
 brew 'pyenv'
@@ -50,6 +51,7 @@ cask 'atom'
 cask 'chromedriver'
 cask 'github'
 cask 'mysqlworkbench'
+<<<<<<< Updated upstream
 cask 'java'
 cask 'phantomjs'
 
@@ -62,46 +64,21 @@ cask 'zoomus'
 ## Media
 cask 'handbrake' # video encoding
 cask 'gimp' # image editing
+=======
+cask 'zoomus'
+>>>>>>> Stashed changes
 cask 'vlc' # media player
 cask 'skitch' # simple image editor by evernote
-cask 'spotify'
-cask 'simple-comic' # alternative to preview
-
-## Utilities
-cask 'transmission' # torrent client
 cask 'alfred' # alternative to spotlight
-cask 'applepi-baker' # burns rasperry pi
 cask 'google-backup-and-sync'
-cask 'cyberduck' # ftp
-cask 'daisydisk' # visualizes volumes
-cask 'balenaetcher' # for USB boot drive creation
+cask 'cyberduck' #ftp
 cask 'keepassxc'
-cask 'megasync'
-cask 'flycut' # clipboard manager
-cask 'soundflower' # redirect sound output
-cask 'speedify' # VPN
-cask 'puush' # uploads screenshots
-cask 'virtualbox' # VM
-cask 'vnc-viewer' # GUI for raspberry pi
 
-## Games
-cask 'minecraft'
-cask 'openemu' # emulator
-cask 'steam'
-# for hearthstone
-cask 'battle-net'
-cask 'hstracker'
+## Social
+cask 'discord'
+cask 'slack'
 
 ## Browsers
 cask 'google-chrome'
 cask 'firefox'
 cask 'opera'
-cask 'tor-browser'
-
-# Mac App Store
-mas 'The Unarchiver', id: 425424353
-mas "Bandwidth+", id: 490461369
-mas "Keynote", id: 409183694
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Orangered Notifier for Reddit", id: 468366517

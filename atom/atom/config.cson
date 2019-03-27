@@ -2,6 +2,12 @@
   _dart:
     _firstRun: true
     _version: "1.0.1"
+<<<<<<< Updated upstream
+=======
+  "atom-beautify":
+    general:
+      _analyticsUserId: "801f1267-3eac-4d97-9db0-c98620e6d0b4"
+>>>>>>> Stashed changes
   "autocomplete-plus":
     autoActivationDelay: 500
     confirmCompletion: "tab always, enter when suggestion explicitly selected"
@@ -9,6 +15,7 @@
     disabledPackages: [
       "linter-eslint"
       "whitespace"
+      "dart"
     ]
     followSymlinks: false
     ignoredNames: [

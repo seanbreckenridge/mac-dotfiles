@@ -48,3 +48,6 @@ done
 
 # Aliases for switching to directories, connecting to my rasberry pi, etc...
 [ -f "${ZSH_CUSTOM}/.personal_aliases" ] && source "${ZSH_CUSTOM}/.personal_aliases"
+
+# Other (e.g. additional path manipulations)
+[ -f "${ZDOTDIR}/.zpersonal" ] && source "${ZDOTDIR}/.zpersonal"
