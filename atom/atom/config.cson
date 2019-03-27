@@ -1,21 +1,22 @@
 "*":
+  _dart:
+    _firstRun: true
+    _version: "1.0.1"
   "autocomplete-plus":
+    autoActivationDelay: 500
     confirmCompletion: "tab always, enter when suggestion explicitly selected"
-  "autocomplete-python":
-    useKite: false
   core:
     disabledPackages: [
       "linter-eslint"
       "whitespace"
-      "kite"
     ]
+    followSymlinks: false
     ignoredNames: [
       ".git"
       ".svn"
       ".DS_Store"
     ]
     telemetryConsent: "limited"
-    useTreeSitterParsers: false
   editor:
     autoIndentOnPaste: false
     fontSize: 17
@@ -30,8 +31,6 @@
   "go-plus":
     goPath: "/Users/stefan/go"
     showPanel: false
-  kite:
-    showWelcomeNotificationOnStartup: false
   linter: {}
   "linter-eslint":
     useGlobalEslint: true
@@ -57,7 +56,5 @@
   "theme-switcher":
     syntaxThemeOne: "one-dark-syntax"
     syntaxThemeTwo: "one-light-syntax"
-  "tree-view":
-    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
