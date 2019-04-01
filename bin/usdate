@@ -2,7 +2,7 @@
 #
 # Prints the date in the US format, because I'm used to the European
 
-"""Usage: usdate [--dash]"""
+"""Usage: usdate [--dash] [--underscore]"""
 
 import subprocess
 import docopt
@@ -11,5 +11,7 @@ args = docopt.docopt(__doc__)
 
 if args["--dash"]:
     subprocess.run("date +%m-%d-%y", shell=True)
+elif args["--underscore"]:
+    subprocess.run("date +%m_%d_%y", shell=True)
 else:
     subprocess.run("date +%m/%d/%y", shell=True)
