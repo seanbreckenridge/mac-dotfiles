@@ -10,10 +10,9 @@ fi
 
 
 for file in "$@"; do
-  seconds=$(ffprobe -i "$file" -show_entries format=duration -v quiet -of csv="p=0")
-  echo -ne "${seconds%.*}s"
-  if (( $seconds > 60 )); then
-    echo -ne "\\t\\t"
+  if [ -f "$file" ]; then # ignore directories
+    seconds=$(ffprobe -i "$file" -show_entries format=duration -v quiet -of csv="p=0")
+    echo -ne "${seconds%.*}s|"
     minutes=$(perl -E "say int(${seconds}/60)")
     seconds=$(( $seconds % 60 ))
     if (( $minutes > 60 )); then
@@ -23,9 +22,8 @@ for file in "$@"; do
       echo -ne "${hours}h:${minutes}m:${seconds%.*}s" # truncate decimal part on seconds
     else
       # print minutes and seconds
-      echo -ne "${minutes}m:${seconds%.*}s\\t"
+      echo -ne "${minutes}m:${seconds%.*}s"
     fi
+    echo -e "|$file"
   fi
-  echo -e "\\t$file"
 done
-
