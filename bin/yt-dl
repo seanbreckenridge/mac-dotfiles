@@ -27,7 +27,7 @@ if args.wait:
 dir = os.path.abspath(".")
 if args.tmp:
     dir = os.path.abspath("/tmp")
-else:
+elif args.downloads:
     dir = os.path.join(os.path.expanduser("~"), "Downloads")
 
 # if given a custom name, use it instead
