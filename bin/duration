@@ -1,6 +1,12 @@
 #!/usr/bin/env zsh
 #
 # gives you the duration of a audio/video file given on command line.
+# you can get a specific part of these by using cut:
+#
+# duration movie.mp4 | cut -d "|" -f 1
+# duration movie.mp4 | cut -d "|" -f 2
+# duration movie.mp4 | cut -d "|" -f 3
+
 
 if [ -z "$1" ]; then
   echo "You must provide at least one file on command line."
