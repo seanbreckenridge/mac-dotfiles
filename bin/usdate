@@ -2,7 +2,12 @@
 #
 # Prints the date in the US format, because I'm used to the European
 
-"""Usage: usdate [--dash] [--underscore]"""
+"""Usage: usdate [--dash] [--underscore] [--help]
+
+usdate --dash           use dashes instead of forward slashes as seperators
+usdate --underscore     use underscores instead of forward slashes as seperators
+usdate --help           show this help message
+"""
 
 import subprocess
 import docopt
