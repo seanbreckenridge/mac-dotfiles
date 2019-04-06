@@ -7,8 +7,15 @@
 # can also pipe like `echo http://somelink.com | openlinks`
 
 import sys
+import re
 import webbrowser
 
+# open anything given as a command line argument
+links = re.findall(r'(https?://\S+)', " ".join(sys.argv).strip())
+for link in links:
+    webbrowser.open_new_tab(link)
+
+# open anything piped/as input
 while True:
     try:
         user_input = input()
