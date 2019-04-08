@@ -3,26 +3,26 @@
 """Choose a random file in this directory.
 
 Usage:
-  choose [-o] [--hidden] [--exec EXEC]
-  choose --open
-  choose --hidden
-  choose --exec EXEC
+  choose [-o] [-w] [--hidden] [--exec EXEC]
+  choose --open --hidden
+  choose --open --wait --exec EXEC
   choose --help
 
 Options:
   -o, --open        Open the file using the default file descriptor
   --hidden          Include hidden files; ignored by default
+  -w, --wait        Waits for 3 seconds in between --open and --exec.
+                        useful if file is being loaded into memory by --open
+                        and is being moved/deleted by --exec
   --exec EXEC       Execute an additional shell command, specify file location with {}
 
 exec Example:
   choose --exec "ls -l {}"
-  choose --exec "rm -i {}"
+  choose --open --wait --exec "rm -i {}"
 """
 
 import os
-import sys
 import random
-import platform
 import shlex
 import subprocess
 
@@ -44,6 +44,7 @@ print(_file)
 
 # open, if specified
 if args["--open"]:
+    import platform
     operating_system = platform.system()
     # windows
     if operating_system == 'Windows':
@@ -54,6 +55,10 @@ if args["--open"]:
     # other *nix
     else:
         subprocess.call(shlex.split('xdg-open "{}"'.format(_file)))
+
+if args["--wait"]:
+    import time
+    time.sleep(3)
 
 if args["--exec"] is not None:
     if "{}" not in args["--exec"]:
