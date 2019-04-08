@@ -32,7 +32,7 @@ import docopt
 args = docopt.docopt(__doc__)
 
 # list files in current directory
-files = os.listdir(os.environ["PWD"])
+files = os.listdir()
 
 # remove hidden files told not to
 if not args["--hidden"]:
