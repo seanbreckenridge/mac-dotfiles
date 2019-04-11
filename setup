@@ -14,7 +14,6 @@ bash -c ./zsh/install.sh
 bash -c ./homebrew/install.sh
 bash -c ./git/install.sh
 bash -c ./python3/install.sh
-bash -c ./redshift/install.sh
 bash -c ./atom/install.sh
 bash -c ./firefox_addons/install.sh
 bash -c ./macos/set-default-apps.sh

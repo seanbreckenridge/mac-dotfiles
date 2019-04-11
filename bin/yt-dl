@@ -12,7 +12,7 @@ parser.add_argument("--open", action="store_true", help="Open this video after i
 parser.add_argument("--wait", action="store_true", help="After this video finishes downloading, wait for the user to hit enter, and then open it.")
 parser.add_argument("--name", help="Change the name from the default youtube-dl file to the passed name")
 dest = parser.add_mutually_exclusive_group()
-dest.add_argument("--downloads", action="store_true", default=True, help="Change download destination to ~/Downloads")
+dest.add_argument("--downloads", action="store_true", default=False, help="Change download destination to ~/Downloads")
 dest.add_argument("--tmp", action="store_true", help="Download a video to the /tmp/ directory, it will be deleted on computer restart")
 args, unknownargs = parser.parse_known_args()
 
@@ -27,7 +27,7 @@ if args.wait:
 dir = os.path.abspath(".")
 if args.tmp:
     dir = os.path.abspath("/tmp")
-else:
+elif args.downloads:
     dir = os.path.join(os.path.expanduser("~"), "Downloads")
 
 # if given a custom name, use it instead

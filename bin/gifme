@@ -55,14 +55,10 @@ output_filename="${output_filename}-gifme-${current_time}.gif"
 # create frames
 # i - input
 # f - force image format
-# scale:
-#   iw - input width
-#   ih - input height
-# iw/2:-1 halves the width and scales the height accordingly
 # ss - start time
 # t - time
 # r - fps
-ffmpeg -i "$1" -f image2 -vf "scale=iw/2:-1" -ss $2 -t $3 -r $fps /tmp/gifme/d-%09d.png
+ffmpeg -i "$1" -f image2 -ss $2 -t $3 -r $fps /tmp/gifme/d-%09d.png
 printf "Converting %d frames to a gif...\n" $(ls -1 /tmp/gifme | wc -l)
 # convert to gif
 # delay - speed, determined by fps above

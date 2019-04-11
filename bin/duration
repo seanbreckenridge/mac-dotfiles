@@ -1,26 +1,35 @@
 #!/usr/bin/env zsh
 #
 # gives you the duration of a audio/video file given on command line.
+# you can get a specific part of these by using cut:
+#
+# duration movie.mp4 | cut -d "|" -f 1
+# duration movie.mp4 | cut -d "|" -f 2
+# duration movie.mp4 | cut -d "|" -f 3
+
 
 if [ -z "$1" ]; then
-  echo "Provide the file you wish to check the duration for after 'duration'"
+  echo "You must provide at least one file on command line."
+  echo "Ex: duration filename.mp4 otherfile.mkv song.mp3"
   exit 1
 fi
 
-seconds=$(ffprobe -i "$1" -show_entries format=duration -v quiet -of csv="p=0")
-if (( $seconds > 60 )); then
-  minutes=$(perl -E "say int(${seconds}/60)")
-  seconds=$(( $seconds % 60 ))
-  if (( $minutes > 60 )); then
-    hours=$(perl -E "say int(${minutes}/60)")
-    minutes=$(( $minutes % 60 ))
-    # print hours, minutes and seconds
-    echo -e "${hours}h:${minutes}m:${seconds%.*}s" # truncate decimal part on seconds
-  else
-    # print minutes and seconds
-    echo -e "${minutes}m:${seconds%.*}s"
+
+for file in "$@"; do
+  if [ -f "$file" ]; then # ignore directories
+    seconds=$(ffprobe -i "$file" -show_entries format=duration -v quiet -of csv="p=0")
+    echo -ne "${seconds%.*}s|"
+    minutes=$(perl -E "say int(${seconds}/60)")
+    seconds=$(( $seconds % 60 ))
+    if (( $minutes > 60 )); then
+      hours=$(perl -E "say int(${minutes}/60)")
+      minutes=$(( $minutes % 60 ))
+      # print hours, minutes and seconds
+      echo -ne "${hours}h:${minutes}m:${seconds%.*}s" # truncate decimal part on seconds
+    else
+      # print minutes and seconds
+      echo -ne "${minutes}m:${seconds%.*}s"
+    fi
+    echo -e "|$file"
   fi
-else
-  # print seconds
-  echo -e "${seconds%.*}s"
-fi
+done
