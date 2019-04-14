@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# assumes 'copy_to_directory' auto-syncs somewhere
+# e.g. with Google Drive, Dropbox or MEGAsync
+
+directories_to_backup=("${HOME}/bin")
+copy_to_directory="${HOME}/Google Drive/code_backups"
+temp_backup_dir="/tmp/code_backups" # make sure doesnt end with backslash
+
+# clear previous backups
+rm -rf "${temp_backup_dir}"
+mkdir -p "${temp_backup_dir}"
+
+# gzip each directory
+for dir in "${directories_to_backup[@]}"
+do
+  # wait a second to avoid name conflicts
+  unixtime=$(python3 -c "import time; time.sleep(1); print(int(time.time()))")
+  name=$(basename "$dir")
+  backup_path="${temp_backup_dir}/${name}-${unixtime}.tar.gz"
+  # use -z; gzip doesnt follow symbolic links
+  tar cvzf "${backup_path}" "${dir}"
+done
+
+# print size
+du -h /tmp/code_backups
+
+# remove old backups
+# find "${copy_to_directory}" -type file -delete
+# copy to backup sync directory
+mv "${temp_backup_dir}"/* "${copy_to_directory}"
+du -h "${copy_to_directory}"
+echo "Copied to ${copy_to_directory}"
