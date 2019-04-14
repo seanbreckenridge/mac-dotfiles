@@ -2,6 +2,7 @@ cask_args appdir: '/Applications'
 
 # Binaries
 brew 'bash'
+brew 'bash-completion'
 brew 'zsh'
 brew 'cask'
 brew 'htop'
@@ -41,6 +42,11 @@ brew 'rdfind' # find duplicate files
 brew 'ruby'
 brew 'rbenv'
 brew 'ruby-build'
+brew 'docker'
+brew 'docker-completion'
+brew 'docker-compose-completion'
+brew 'docker-machine-completion'
+
 
 # Apps
 
@@ -72,6 +78,7 @@ cask 'alfred' # alternative to spotlight
 cask 'applepi-baker' # burns rasperry pi
 cask 'google-backup-and-sync'
 cask 'cyberduck' # ftp
+cask 'docker' # for the docker daemon
 cask 'daisydisk' # visualizes volumes
 cask 'balenaetcher' # for USB boot drive creation
 cask 'keepassxc'
