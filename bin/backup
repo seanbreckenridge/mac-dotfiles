@@ -24,6 +24,9 @@ done
 # print size
 du -h /tmp/code_backups
 
+# make sure backup directory exists
+mkdir -p "${copy_to_directory}"
+
 # remove old backups
 # find "${copy_to_directory}" -type file -delete
 # copy to backup sync directory
