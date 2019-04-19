@@ -18,6 +18,7 @@ PATH="\
 /usr/local/bin:\
 ${HOME}/Library/Python/3.7/bin:\
 ${DOTDIR}/bin:\
+${DOTDIR}/bin/git:\
 ${DOTDIR}/wrappers:\
 ${HOME}/.cargo/bin:\
 ${PATH}"
