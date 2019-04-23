@@ -51,3 +51,6 @@ done
 
 # Other (e.g. additional path manipulations)
 [ -f "${ZDOTDIR}/.zpersonal" ] && source "${ZDOTDIR}/.zpersonal"
+
+# Personal environmental variables (e.g. credentials)
+[ -f "${ZDOTDIR}/.zpersonalenv" ] && source "${ZDOTDIR}/.zpersonalenv"
