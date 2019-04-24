@@ -18,7 +18,6 @@ brew 'figlet'
 brew 'jp2a'
 brew 'libcaca', args: ['with-imlib2']
 brew 'openssl'
-brew 'speedtest-cli'
 brew 'readline'
 brew 'trash'
 brew 'grep'
