@@ -2,6 +2,7 @@ cask_args appdir: '/Applications'
 
 # Binaries
 brew 'bash'
+brew 'bash-completion'
 brew 'zsh'
 brew 'cask'
 brew 'htop'
@@ -17,7 +18,6 @@ brew 'figlet'
 brew 'jp2a'
 brew 'libcaca'
 brew 'openssl'
-brew 'speedtest-cli'
 brew 'readline'
 brew 'trash'
 brew 'grep'
@@ -42,6 +42,12 @@ brew 'rdfind' # find duplicate files
 brew 'ruby'
 brew 'rbenv'
 brew 'ruby-build'
+brew 'docker'
+brew 'docker-completion'
+brew 'docker-compose-completion'
+brew 'docker-machine-completion'
+brew 'jenkins'
+
 
 # Apps
 
@@ -50,8 +56,8 @@ cask 'atom'
 cask 'chromedriver'
 cask 'github'
 cask 'mysqlworkbench'
-<<<<<<< Updated upstream
 cask 'java'
+cask 'homebrew/cask-versions/adoptopenjdk8'
 cask 'phantomjs'
 
 ## Social
@@ -63,14 +69,14 @@ cask 'zoomus'
 ## Media
 cask 'handbrake' # video encoding
 cask 'gimp' # image editing
-=======
-cask 'zoomus'
->>>>>>> Stashed changes
 cask 'vlc' # media player
 cask 'skitch' # simple image editor by evernote
 cask 'alfred' # alternative to spotlight
 cask 'google-backup-and-sync'
-cask 'cyberduck' #ftp
+cask 'cyberduck' # ftp
+cask 'docker' # for the docker daemon
+cask 'daisydisk' # visualizes volumes
+cask 'balenaetcher' # for USB boot drive creation
 cask 'keepassxc'
 
 ## Social

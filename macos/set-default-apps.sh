@@ -8,9 +8,15 @@
 
 # if we're not on mac, exit
 if [[ $(uname -s) == "Darwin" ]]; then
-    echo "› setting default applications for various file extensions"
+    if [[ ! $(command -v duti) ]]; then
+        echo -e "'duti' isn't installed. Install it with:\\n\\tbrew install duti"
+        exit 1
+    else
+        echo "› setting default applications for various file extensions"
+    fi
 else
-    exit 1;
+    echo "Not on Mac, exiting..."
+    exit 1
 fi
 
 audio=(

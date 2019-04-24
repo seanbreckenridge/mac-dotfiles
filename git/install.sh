@@ -19,15 +19,6 @@ if [[ -z $(git config --global user.email) ]]; then
   git config --global user.email "$githubemail"
 fi
 
-# check if ssh key is configured
-githubemail=$(git config --global user.email)
-ssh_l_output=$(ssh-add -l)
-if echo -e $ssh_l_output | grep -q "$githubemail"; then
-  echo -e "SSH key configured correctly\n"
-else
-  echo -e "\033[0;31mDid not find corresponding SSH key. Add it by doing:\nssh-add ~/.ssh/id_name\n\033[0m"
-fi
-
 git config --global core.editor nano
 
 echo -e "› Finished GitHub configuration:"

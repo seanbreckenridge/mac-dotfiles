@@ -2,11 +2,13 @@
 #
 # Prints the date in the US format, because I'm used to the European
 
-"""Usage: usdate [--dash] [--underscore] [--help]
+"""Usage: usdate [-du] [--help]
 
-usdate --dash           use dashes instead of forward slashes as seperators
-usdate --underscore     use underscores instead of forward slashes as seperators
-usdate --help           show this help message
+-d, --dashes           use dashes instead of forward
+                       slashes as seperators
+-u --underscores       use underscores instead of forward
+                       slashes as seperators
+--help                 show this help message
 """
 
 import subprocess
@@ -14,9 +16,10 @@ import docopt
 
 args = docopt.docopt(__doc__)
 
-if args["--dash"]:
-    subprocess.run("date +%m-%d-%y", shell=True)
-elif args["--underscore"]:
-    subprocess.run("date +%m_%d_%y", shell=True)
-else:
-    subprocess.run("date +%m/%d/%y", shell=True)
+sep = "/"
+if args["--dashes"]:
+    sep = "-"
+elif args["--underscores"]:
+    sep = "_"
+
+subprocess.run("date +%m{sep}%d{sep}%y".format(sep=sep), shell=True)
