@@ -23,6 +23,9 @@ if [[ "$1" == "--list" ]]; then
       echo -e $(basename "$todo")
     done
   fi
+elif echo "$1" | grep -q "^-"; then
+  echo "todo started with a hyphen, ignoring since you probably mistyped --todo"
+  exit 1
 elif (( ${+1} )); then # if argument is not empty
   echo 'TODO' > ~/Desktop/"$*"
   echo "created '${*}' on the Desktop"
