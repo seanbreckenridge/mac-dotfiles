@@ -27,13 +27,6 @@ plugins=()
 
 source "$ZSH/oh-my-zsh.sh"
 
-# https://github.com/holman/dotfiles/blob/master/system/grc.zsh
-# GRC colorizes nifty unix tools all over the place
-if (( $+commands[grc] )) && (( $+commands[brew] ))
-then
-  source `brew --prefix`/etc/grc.bashrc
-fi
-
 # don't show % at end of partial lines
 setopt PROMPT_CR PROMPT_SP
 PROMPT_EOL_MARK=""
