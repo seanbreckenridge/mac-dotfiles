@@ -5,6 +5,6 @@ function e() {
 	if [ $# -eq 0 ]; then
 	  "$EDITOR" .;
 	else
-		"$EDITOR" "$@";
+	  "$EDITOR" "$@";
 	fi;
 }
