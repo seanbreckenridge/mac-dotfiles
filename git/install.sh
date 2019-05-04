@@ -1,7 +1,6 @@
 #!/bin/bash
 #
-# Sets global name and email config, default editor to atom, and checks
-# if you have an ssh key set
+# Sets global name and email config, set default editor to nano
 
 echo "› Github configuration..."
 

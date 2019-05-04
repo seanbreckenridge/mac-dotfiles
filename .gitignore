@@ -32,14 +32,3 @@ Desktop.ini
 /wrappers/*
 !/wrappers/wrapper
 
-# atom
-
-/atom/atom/blob-store
-/atom/atom/compile-cache
-/atom/atom/recovery
-/atom/atom/storage
-/atom/atom/.apm
-/atom/.installed
-/atom/atom/packages
-/atom/atom/.node-gyp
-/atom/atom/kite-config.json

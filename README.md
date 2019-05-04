@@ -11,7 +11,6 @@ My `dotfiles` directory sits at `~/dotfiles`, each directory includes an relevan
 Notes:
 - `setup` sets `$ZDOTDIR` to `~/dotfiles/zsh/`, and symlinks `~/dotfiles/zsh/.zshenv` to `~/.zshenv`
 - `setup` sets `$ZSH_CUSTOM` to `~/dotfiles/zsh/custom`, so any additional plugins/themes should be put there (i.e. in `~/dotfiles/zsh/custom/themes`)
-- `atom/install.sh` symlinks `atom/atom` to `~/.atom`, the directory atom uses to store its config
 - [todo](/bin/todo) creates a todo on the Desktop, todos are listed when a shell is opened
 
 ### installation
