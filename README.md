@@ -2,7 +2,7 @@
 
 there are many `dotfiles`, but these are mine.
 
-Note these are for mac. I have a branch for [Linux Mint](https://github.com/seanbreckenridge/dotfiles/tree/linux-mint), but that should work on many different distros. 
+These are for Mac. I have a branch for [Linux Mint](https://github.com/seanbreckenridge/dotfiles/tree/linux-mint), but that should work on many different distros.
 
 My `dotfiles` directory sits at `~/dotfiles`, each directory includes an relevant `install.sh` file, you can run all of them by running [`./setup`](/setup).
 
