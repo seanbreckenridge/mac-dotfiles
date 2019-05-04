@@ -42,10 +42,6 @@ brew 'rdfind' # find duplicate files
 brew 'ruby'
 brew 'rbenv'
 brew 'ruby-build'
-brew 'docker'
-brew 'docker-completion'
-brew 'docker-compose-completion'
-brew 'docker-machine-completion'
 brew 'jenkins'
 brew 'shfmt' # shell formatting
 
