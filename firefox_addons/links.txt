@@ -3,7 +3,6 @@ https://addons.mozilla.org/en-US/firefox/addon/reddit-enhancement-suite/
 https://addons.mozilla.org/en-US/firefox/addon/markdown-viewer-webext/
 https://addons.mozilla.org/en-US/firefox/addon/darkreader/
 https://addons.mozilla.org/en-US/firefox/addon/cookie-autodelete/
-https://addons.mozilla.org/en-US/firefox/addon/enhancer-for-youtube/
 https://addons.mozilla.org/en-US/firefox/addon/honey/
 https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/
 https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/
