@@ -23,9 +23,8 @@ then
 fi
 
 echo "› tapping..."
-brew tap 'Homebrew/bundle'
+brew tap 'homebrew/bundle'
 brew tap 'caskroom/cask'
-brew tap 'homebrew/cask-versions'
 echo "› brew update && brew upgrade"
 brew update && brew upgrade
 echo "› upgrading casks"

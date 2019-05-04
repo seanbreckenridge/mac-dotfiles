@@ -53,11 +53,11 @@ brew 'shfmt' # shell formatting
 
 ## Code
 cask 'atom'
-cask 'chromedriver'
+cask 'chromedriver-beta'
 cask 'github'
 cask 'mysqlworkbench'
 cask 'java'
-cask 'homebrew/cask-versions/adoptopenjdk8'
+cask 'adoptopenjdk8'
 cask 'phantomjs'
 
 ## Social
