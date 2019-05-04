@@ -5,8 +5,6 @@
 .DS_Store
 .Spotlight-V100
 .Trashes
-.zpersonal
-.zpersonalenv
 
 # Windows
 
@@ -23,8 +21,7 @@ Desktop.ini
 
 /zsh/.zsh_history
 /zsh/custom/.personal_aliases
-/zsh/.zpersonalenv
-/zsh/.zpersonal
+/zsh/.zpersonal*
 .zcompdump*
 
 # wrappers
