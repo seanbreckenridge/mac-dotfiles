@@ -39,7 +39,10 @@ fi
 echo "#!/usr/bin/env bash" >> "$wrapper_location"
 if [ ! -z "$3" ]; then
     printf "%s " $3 >> "$wrapper_location"
+else
+    printf "bash " >> "$wrapper_location"
 fi
+
 printf "%s %s\n" $script_location '"$@"' >> "$wrapper_location"
 chmod +x "$wrapper_location"
 
