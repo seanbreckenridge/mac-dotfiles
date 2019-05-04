@@ -3,10 +3,7 @@
 # updates brew, python, and anything from the mac app store
 
 # updating brew
-brew tap 'Homebrew/bundle'
-brew tap 'Homebrew/cask'
-brew tap 'caskroom/versions'
-brew update && brew upgrade
+"${DOTDIR}/homebrew/install.sh"
 
 echo "› updating python libraries"
 "${DOTDIR}/python3/install.sh" 2>&1
