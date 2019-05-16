@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+#
+# copies anything from stdin to the clipboard (so you can ⌘ V it elsewhere)
+# can be used like:
+# python3 script_that_outputs_to_stdout.py | clipboard
+# ls -1R src | clipboard
+# to copy the output of that to your clipboard
+
+import sys
+
+try:
+    import pyperclip
+except ModuleNotFoundError:
+    print("Couldn't find the pyperclip module. Install is by running 'pip3 install pyperclip'", file=sys.stderr)
+    sys.exit(1)
+
+buffer = sys.stdin.read().rstrip("\n")
+pyperclip.copy(buffer)
+print("Copied {} characters to the clipboard".format(len(buffer)))
+
+
