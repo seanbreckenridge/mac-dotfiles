@@ -9,6 +9,8 @@
 #
 # Modified from: https://github.com/AndrewSB/dotfiles/blob/master/zsh/functions/gi
 
-cat "${DOTDIR}/git/basic_gitignore"
-echo -e '\n' # 2 newlines
+if [[ "$@" != "" ]] ; then
+    cat "${DOTDIR}/git/basic_gitignore"
+    echo -e '\n' # 2 newlines
+fi
 curl -s -L https://www.gitignore.io/api/"$@"
