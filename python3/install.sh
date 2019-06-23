@@ -4,6 +4,8 @@ echo -e "› Upgading pip"
 pip3 install --upgrade --user pip setuptools wheel # upgrade pip
 echo -e "› Installing/Upgrading packages"
 pip3 install --upgrade --user -r "${DOTDIR}/python3/requirements3.txt"
+# upgrade other packages
+python3 -m pip list --outdated --format=freeze | cut -d "=" -f 1 | xargs -n1 python3 -m pip install -U 
 
 # speedtest installs 2 executable scripts
 # speedtest and speedtest-cli, which both have the same
