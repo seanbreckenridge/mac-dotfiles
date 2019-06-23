@@ -1,5 +1,6 @@
 alias tree='tree -N'
 alias du='du -h'
+alias chrome='open -a "Google Chrome"'
 
 # Source: https://github.com/mathiasbynens/dotfiles/blob/master/.functions
 # Normalize `open` across Linux, macOS, and Windows.
