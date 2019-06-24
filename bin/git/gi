@@ -9,7 +9,8 @@
 #
 # Modified from: https://github.com/AndrewSB/dotfiles/blob/master/zsh/functions/gi
 
-if [[ "$@" != "" ]] ; then
+# if input isn't empty
+if [ ! $( echo "$@" | tr -d " \n\r" ) = "" ]; then
     cat "${DOTDIR}/git/basic_gitignore"
     echo -e '\n' # 2 newlines
 fi
