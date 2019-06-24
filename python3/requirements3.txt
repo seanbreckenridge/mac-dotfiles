@@ -8,7 +8,6 @@ bpython
 bs4
 colorama
 discogs_client
-discord.py
 docopt
 giturlparse.py
 google-api-python-client
