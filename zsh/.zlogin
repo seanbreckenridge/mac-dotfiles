@@ -12,5 +12,5 @@ ${DOTDIR}/bin/todo --list
 eval `ssh-agent` > /dev/null
 find "${HOME}/.ssh" -type file | \
     grep -v known_hosts | \
-    grep -v "\\.pub" | \
+    grep -v "\\.pub$" | \
     xargs -I {} ssh-add -q "{}"
