@@ -1,14 +1,25 @@
 #!/usr/bin/env python3
 
-# Waits for input, give one or more links as input
-# Opens link in default browser
-# input 'q' or 'quit' to quit
-#
-# can also pipe like `echo http://somelink.com | openlinks`
+"""Usage:
+    openlinks LINKS... [--help]
+    openlinks
+
+Can also pipe to openlinks like:
+
+    echo "https://..." | openlinks
+    cat file_with_links.txt | openlinks
+
+Waits for input on stdin, give one or more links as input
+Opens link in default browser
+input 'q', 'quit', or EOF (Ctrl+D) to quit
+"""
 
 import sys
 import re
 import webbrowser
+
+import docopt
+docopt.docopt(__doc__)
 
 # open anything given as a command line argument
 links = re.findall(r'(https?://\S+)', " ".join(sys.argv).strip())

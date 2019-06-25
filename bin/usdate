@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-#
-# Prints the date in the US format, because I'm used to the European
 
 """Usage: usdate [-du] [--help]
+
+Prints the date in the US format, because I'm used to the European
 
 -d, --dashes           use dashes instead of forward
                        slashes as seperators
@@ -11,7 +11,7 @@
 --help                 show this help message
 """
 
-import subprocess
+import datetime
 import docopt
 
 args = docopt.docopt(__doc__)
@@ -22,4 +22,4 @@ if args["--dashes"]:
 elif args["--underscores"]:
     sep = "_"
 
-subprocess.run("date +%m{sep}%d{sep}%y".format(sep=sep), shell=True)
+print(datetime.datetime.now().strftime("%m{s}%d{s}%y".format(s=sep)))

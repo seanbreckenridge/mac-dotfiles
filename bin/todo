@@ -1,11 +1,20 @@
 #!/usr/bin/env zsh
-#
-# describe a task after 'todo' to create a todo on the Desktop
-#
-# any file on the desktop that starts with 'TODO' is recognized as a todo
-#
-# call 'todo --list' to list current todos
 
+usage="
+Usage:
+  $(basename "$0") some todo
+  $(basename "$0") --list
+  $(basename "$0") -h
+
+- describe a task after 'todo' to create a todo on the Desktop
+- any file on the desktop that starts with 'TODO' is recognized as a todo
+- call 'todo --list' to list current todos
+"
+
+if [[ "$1" == "-h" || "$1" == "-help" || "$1" == "--help" ]]; then
+  echo "${usage}"
+  exit 0
+fi
 
 if [[ "$1" == "--list" ]]; then
   todo_array=()
@@ -15,7 +24,7 @@ if [[ "$1" == "--list" ]]; then
         todo_array+=("$file")
       fi
   done
-  
+
   if (( ${#todo_array[*]} > 0 )); then # if there are todos
     printf "\n"
     for todo in $todo_array; do
@@ -24,11 +33,12 @@ if [[ "$1" == "--list" ]]; then
     done
   fi
 elif echo "$1" | grep -q "^-"; then
-  echo "todo started with a hyphen, ignoring since you probably mistyped --todo"
+  echo "todo started with a hyphen, ignoring since you probably mistyped --help/--list"
   exit 1
 elif (( ${+1} )); then # if argument is not empty
   echo 'TODO' > ~/Desktop/"$*"
   echo "created '${*}' on the Desktop"
-else
-  echo "run 'todo --list' to list the current todos, or describe a task after 'todo'"
+else # if input is empty
+  echo "${usage}"
+  exit 0
 fi

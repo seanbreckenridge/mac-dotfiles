@@ -21,10 +21,11 @@ if [[ "$1" == "-h" || "$1" == "--help" || -z "$2" ]]; then
   exit 1
 fi
 
-script_location="${PWD}/${1}"
+# installed with 'brew install coreutils'
+script_location=$(realpath "$1")
 
 if [ ! -f "$script_location" ]; then
-  printf "Source file %s does not exist.\n" $1
+  printf "Source file %s does not exist.\n" $script_location
   exit 1
 fi
 
@@ -36,11 +37,16 @@ if [ -f "$wrapper_location" ]; then
 fi
 
 # write to wrapper file
-echo "#!/usr/bin/env bash" >> "$wrapper_location"
 if [ ! -z "$3" ]; then
+  if [ $(which "${3}") ]; then
+    echo "#!/usr/bin/env bash" >> "$wrapper_location"
     printf "%s " $3 >> "$wrapper_location"
+  else
+    printf "Couldn't find a command named '%s'.\n" $3
+    exit 1
+  fi
 else
-    printf "bash " >> "$wrapper_location"
+  printf "#!/usr/bin/env bash\n" >> "$wrapper_location"
 fi
 
 printf "%s %s\n" $script_location '"$@"' >> "$wrapper_location"

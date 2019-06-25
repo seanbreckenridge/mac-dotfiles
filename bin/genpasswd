@@ -1,27 +1,36 @@
 #!/usr/bin/env python3
-#
-# generates a password, prints it and puts it on your clipboard
-#
-# e.g. genpasswd
-# e.g. genpasswd 35
 
-from random import randint, sample, choice
-from sys import argv
-from pyperclip import copy
+"""Usage:
+    genpasswd
+    genpasswd 40
+    genpasswd --help
+
+generates a password, prints it and puts it on your clipboard
+
+Example:
+    genpasswd 50 # for a password with length 50
+"""
+
+import random
+import string
 
 def generate(passwd_length):
     """Generates a password of given length"""
-    pw_chars = r"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz$#@_&*"
-    password = ''.join(choice(pw_chars) for _ in range(passwd_length))
-    return password
+    pw_chars = string.ascii_letters + string.digits + '$#@_&*'
+    return ''.join(random.choice(pw_chars) for _ in range(passwd_length))
 
 if __name__ == "__main__":
+
+    # modules only required for script
+    import docopt
+    import pyperclip
+    args = docopt.docopt(__doc__)
+
     password_length = 20
-    if len(argv) > 1:
-        try:
-            password_length = int(argv[1])
-        except:
-            pass #  couldn't use input as password length
+    try:
+        password_length = int(args["PASSWD_LENGTH"])
+    except:
+        pass #  couldn't use input as password length
     pw = generate(password_length)
     print(pw)
-    copy(pw) # puts on clipboard
+    pyperclip.copy(pw) # puts on clipboard
