@@ -22,16 +22,11 @@ then
   fi
 fi
 
-echo "› tapping..."
 brew tap 'homebrew/bundle'
 brew tap 'caskroom/cask'
-echo "› brew update && brew upgrade"
 brew update && brew upgrade
-echo "› upgrading casks"
 brew cask upgrade
-echo "› Brewfile"
 brew bundle --file="$HOMEBREW_BREWFILE"
-echo "› configuring shells"
 if [[ $(which zsh) == "/bin/zsh" ]]; then
   # /usr/local/bin is first on the path in .zshenv
   # /usr/bin/env should now use brew installed versions
@@ -41,6 +36,4 @@ fi
 if (( $(grep -c "/usr/local/bin/zsh" /etc/shells) == 0 )); then
   sudo sh -c 'echo /usr/local/bin/zsh >> /etc/shells'
   chsh -s $(which zsh)
-else
-  echo "› shells have already been configured properly"
 fi

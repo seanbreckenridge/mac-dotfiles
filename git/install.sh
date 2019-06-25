@@ -2,8 +2,6 @@
 #
 # Sets global name and email config, set default editor to nano
 
-echo "› Github configuration..."
-
 # check for global name config
 if [[ -z $(git config --global user.name) ]]; then
   printf "No global name set. Enter full name: "
@@ -20,6 +18,4 @@ fi
 
 git config --global core.editor nano
 
-echo -e "› Finished GitHub configuration:"
-# print configuration
 git config --list | cat

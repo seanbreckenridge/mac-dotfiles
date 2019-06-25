@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo "› setting up zsh environment"
-
 # make sure original oh-my-zsh files are removed
 original_files=("${HOME}/.zshenv" "${HOME}/.zshrc" "${HOME}/.zsh_history")
 

@@ -3,12 +3,10 @@
 # updates brew, python, and anything from the mac app store
 
 # updating brew
-"${DOTDIR}/homebrew/install.sh"
+bash -x "${DOTDIR}/homebrew/install.sh"
 
-echo "› updating python libraries"
-"${DOTDIR}/python3/install.sh" 2>&1
+bash -x "${DOTDIR}/python3/install.sh" 2>&1
 
 if [[ $(uname -s) == "Darwin" ]]; then
-  echo "› mac softwareupdate"
   "${DOTDIR}/macos/update.sh" 2>&1
 fi

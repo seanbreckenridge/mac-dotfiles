@@ -13,6 +13,4 @@ if [[ $(uname -s) == "Darwin" ]]; then
     n|N ) ;;
     * ) printf "Invalid response (%s). Run 'set_mac_defaults' and use (y/n)" $resp
   esac
-else
-  echo -e "› Not on macOS, skipping macos"
 fi

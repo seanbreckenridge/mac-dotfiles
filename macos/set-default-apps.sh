@@ -11,8 +11,6 @@ if [[ $(uname -s) == "Darwin" ]]; then
     if [[ ! $(command -v duti) ]]; then
         echo -e "'duti' isn't installed. Install it with:\\n\\tbrew install duti"
         exit 1
-    else
-        echo "› setting default applications for various file extensions"
     fi
 else
     echo "Not on Mac, exiting..."
