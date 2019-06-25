@@ -29,3 +29,4 @@ Desktop.ini
 /wrappers/*
 !/wrappers/wrapper
 
+__pycache__/
