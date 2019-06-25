@@ -5,8 +5,13 @@
 # updating brew
 bash -x "${DOTDIR}/homebrew/install.sh"
 
+# updating python
 bash -x "${DOTDIR}/python3/install.sh" 2>&1
 
+# update global node modules
+npm update -g
+
+# updating macos software/OS updates
 if [[ $(uname -s) == "Darwin" ]]; then
   "${DOTDIR}/macos/update.sh" 2>&1
 fi

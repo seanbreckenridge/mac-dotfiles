@@ -17,3 +17,4 @@ bash -c ./python3/install.sh
 bash -c ./firefox_addons/install.sh
 bash -xc ./macos/set-default-apps.sh
 bash -c ./bin/set_mac_defaults
+bash -c ./node/install.sh

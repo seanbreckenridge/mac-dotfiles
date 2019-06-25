@@ -1,3 +1,4 @@
 alias tree='tree -N'
 alias du='du -h'
 alias chrome='open -a "Google Chrome"'
+alias thesaurus='moby'
