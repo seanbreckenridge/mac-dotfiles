@@ -2,7 +2,7 @@
 
 """Usage:
     genpasswd
-    genpasswd 40
+    genpasswd PASSWD_LENGTH
     genpasswd --help
 
 generates a password, prints it and puts it on your clipboard
