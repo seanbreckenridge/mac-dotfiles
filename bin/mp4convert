@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# converts all inputs on command line to 720p mp4 files.
+# converts all inputs on command line to mp4 files.
 #
 # e.g. 720convert pulpfiction.mp4
 
