@@ -6,10 +6,10 @@
 bash -x "${DOTDIR}/homebrew/install.sh"
 
 # updating python
-bash -x "${DOTDIR}/python3/install.sh" 2>&1
+bash -x "${DOTDIR}/python3/install.sh"
 
 # update global node modules
-npm update -g
+bash -x "${DOTDIR}/node/install.sh"
 
 # updating macos software/OS updates
 if [[ $(uname -s) == "Darwin" ]]; then

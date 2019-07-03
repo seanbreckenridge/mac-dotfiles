@@ -7,3 +7,5 @@ fi
 
 npm install --global \
     moby
+
+npm update -g
