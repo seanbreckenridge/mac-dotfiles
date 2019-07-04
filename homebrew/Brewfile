@@ -71,13 +71,28 @@ cask 'cyberduck' # ftp
 cask 'docker' # for the docker daemon
 cask 'daisydisk' # visualizes volumes
 cask 'balenaetcher' # for USB boot drive creation
-cask 'keepassxc'
+cask 'keepassxc' # password manager
+cask 'spotify'
+
+## Utitlties
+cask 'flycut' # clipboard manager
+cask 'megasync' # mega.nz
+cask 'soundflower' # audio redirection
+cask 'speedify' # VPN
+cask 'vnc-viewer' # connect to raspberry pi
 
 ## Social
 cask 'discord'
 cask 'slack'
+cask 'steam'
+cask 'zoomus'
 
 ## Browsers
 cask 'google-chrome'
 cask 'firefox'
 cask 'opera'
+cask 'tor-browser'
+
+## Games
+cask 'minecraft'
+cask 'openemu'
