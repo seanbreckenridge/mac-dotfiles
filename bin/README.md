@@ -200,14 +200,20 @@ Usage:
     openlinks LINKS... [--help]
     openlinks
 
-Can also pipe to openlinks like:
+Opens URLs in your default browser.
 
+Examples:
+
+    openlinks <<< "https://"
+    openlinks "https://" "http://"
     echo "https://..." | openlinks
     cat file_with_links.txt | openlinks
 
-Waits for input on stdin, give one or more links as input
-Opens link in default browser
-input 'q', 'quit', or EOF (Ctrl+D) to quit
+If no links are given when called, i.e.:
+$ openlinks
+
+You can input/paste links; they'll be opened when you hit enter/return
+type 'q', 'quit', or EOF (Ctrl+D), Ctrl+C to quit
 
 ```
 
