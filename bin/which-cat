@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-usage="
-$(basename "$0") SHELL_COMMAND [-h]
+usage="$(basename "$0") SHELL_COMMAND [-h]
 
 calls 'which' to locate an executable
 prints the contents of the file if it exists, and is readable
 
 Arguments:
-  -h  show help message"
+  -h  show help message
+"
 
 if [[ "$1" == "-h" || "$1" == "-help" || "$1" == "--help" ]]; then
   echo "${usage}"

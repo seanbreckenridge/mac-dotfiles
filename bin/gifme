@@ -1,24 +1,35 @@
 #!/usr/bin/env bash
-#
-# creates a gif from a video file
-# command line arguments: 
-# $1 - the path to the movie we're converting
-# $2 - the start time of the finished gif
-# $3 - duration; the length of the video clip after the start time to convert
-# Time(s) can be in seconds, or it also accepts the "hh:mm:ss[.xxx]" format
-# $4 - (optional) specify an integer fps value. default is 10
-# For best output, it should be a factor of 100; e.g. 10, 20, 25, 50
-#
-# e.g. gifme ~/Movies/your-favorite-movie.mp4 00:43:04 5
-# e.g. gifme ~/Movies/your-favorite-movie.mp4 01:04:02 10.5 25
-#
-# Note if you want to convert the entire duration for a video file to
-# a gif, you can provide a duration much higher than the length of the video
-# e.g. gifme ~/Movies/a-short-video.mkv 0 9999999 10
-#
-# requires 'imagemagick' and 'ffmpeg'
-#
-# Modified from: https://github.com/holman/dotfiles/blob/master/bin/movieme
+
+usage="Usage:
+$(basename "$0") [-h]
+$(basename "$0") <FILE> <START_TIME> <DURATION> [FPS]
+
+Creates a gif from a video file.
+
+command line arguments:
+<FILE> - the path to the movie we're converting
+<START_TIME> - the start time of the finished gif
+<DURATION> - duration; the length of the video clip after the start time to convert
+Time(s) can be in seconds, or it also accepts the \"hh:mm:ss[.xxx]\" format
+[FPS] - (optional) specify an integer fps value. default is 10
+For best output, it should be a factor of 100; e.g. 10, 20, 25, 50
+
+e.g. gifme ~/Movies/your-favorite-movie.mp4 00:43:04 5
+e.g. gifme ~/Movies/your-favorite-movie.mp4 01:04:02 10.5 25
+
+Note if you want to convert the entire duration for a video file to
+a gif, you can provide a duration much higher than the length of the video
+e.g. gifme ~/Movies/a-short-video.mkv 0 9999999 10
+
+requires 'imagemagick' and 'ffmpeg'
+
+Modified from: https://github.com/holman/dotfiles/blob/master/bin/movieme
+"
+
+if [[ "$1" == "-h" || "$1" == "-help" || "$1" == "--help" ]]; then
+  echo "${usage}"
+  exit 0
+fi
 
 # quit if ffmpeg fails
 set -e
@@ -29,8 +40,10 @@ mkdir -p /tmp/gifme
 
 # check for command line arguments
 if [ -z "$3" ]; then
-  echo -e "You didn't provide enough arguments."
-  echo -e "\$1 - the path to the movie we're converting
+  echo -e "You didn't provide enough arguments.
+Type 'gifme -h' for additional help.
+
+\$1 - the path to the movie we're converting
 \$2 - the start time of the finished gif
 \$3 - duration; the length of the video clip after the start time to convert
 Time(s) can be in seconds, or it also accepts the \"hh:mm:ss[.xxx]\" format

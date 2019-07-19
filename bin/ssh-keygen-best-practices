@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-usage="
-$(basename "$0") [-h]
+usage="Usage:
+    $(basename "$0") [-h]
 
 Creates a good ssh key
 Source: https://security.stackexchange.com/a/144044
@@ -14,7 +14,8 @@ OpenSSH format
   password cracking (should the keys be stolen).
 
 Arguments:
-  -h  show help message"
+  -h  show help message
+"
 
 if [[ "$1" == "-h" || "$1" == "-help" || "$1" == "--help" ]]; then
   echo "${usage}"

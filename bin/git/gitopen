@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+#
+# Opens the current git repository in your browser, if you're in one
 
 import subprocess
 import webbrowser

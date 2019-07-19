@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-#
-# Download a video using youtube-dl, and then do something with it
-# do yt-dl --help to see options
-# leftover arguments are passed to youtube-dl
 
 import os
 import argparse
@@ -13,7 +9,7 @@ parser.add_argument("--wait", action="store_true", help="After this video finish
 parser.add_argument("--name", help="Change the name from the default youtube-dl file to the passed name")
 dest = parser.add_mutually_exclusive_group()
 dest.add_argument("--downloads", action="store_true", default=False, help="Change download destination to ~/Downloads")
-dest.add_argument("--tmp", action="store_true", help="Download a video to the /tmp/ directory, it will be deleted on computer restart")
+dest.add_argument("--tmp", action="store_true", help="Download a video to the /tmp directory, it will be deleted on computer restart")
 args, unknownargs = parser.parse_known_args()
 
 # give youtube-dl leftover arguments
