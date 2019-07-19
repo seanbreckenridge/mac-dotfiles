@@ -248,7 +248,7 @@ Arguments:
 Usage:
     todo some todo
     todo [--list]
-    #(basename /Users/sean/dotfiles/bin/todo) [-h|--help]
+    todo [-h|--help]
 
 - describe a task after 'todo' to create a todo on the Desktop
 - any file on the desktop that starts with 'TODO' is recognized as a todo
