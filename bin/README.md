@@ -1,17 +1,17 @@
 Created by [create_readme](./create_readme)
 
-### 720convert
+### [720convert](./720convert)
 ```
 converts all inputs on command line to 720p mp4 files.
 e.g. 720convert pulpfiction.mp4
 ```
 
-### alias-edit
+### [alias-edit](./alias-edit)
 ```
 Opens the personal aliases file (${ZSH_CUSTOM}/.personal_aliases)
 ```
 
-### average
+### [average](./average)
 ```
 Usage:
     average [-h]
@@ -22,17 +22,18 @@ in seconds of files given on command line
 
 Example usage:
   average ~/Music/some_album/*
+  
 
 ```
 
-### backup
+### [backup](./backup)
 ```
 Creates a backup of my ~/bin directory (where I store all my code)
 assumes 'copy_to_directory' auto-syncs somewhere
 e.g. with Google Drive, Dropbox or MEGAsync
 ```
 
-### choose
+### [choose](./choose)
 ```
 Choose a random file in this directory.
 I often use this to pick a random song or movie to watch.
@@ -57,7 +58,7 @@ exec Example:
 
 ```
 
-### clipboard
+### [clipboard](./clipboard)
 ```
 copies anything from stdin to the clipboard (so you can ⌘ V it elsewhere)
 can be used like:
@@ -66,12 +67,12 @@ ls -1R src | clipboard
 to copy the output of that to your clipboard
 ```
 
-### create_readme
+### [create_readme](./create_readme)
 ```
 Creates the README for this bin directory
 ```
 
-### decode64
+### [decode64](./decode64)
 ```
 Usage:
 	decode64 SUBSTR HASH
@@ -82,7 +83,7 @@ If SUBSTR is a number, will decode HASH that many times
 
 ```
 
-### duration
+### [duration](./duration)
 ```
 Usage:
 duration [-h]
@@ -98,14 +99,15 @@ duration movie.mp4 | cut -d "|" -f 1
 duration movie.mp4 | cut -d "|" -f 2
 duration movie.mp4 | cut -d "|" -f 3
 
+
 ```
 
-### echopath
+### [echopath](./echopath)
 ```
 prints everything on your $PATH seperated by newlines
 ```
 
-### genpasswd
+### [genpasswd](./genpasswd)
 ```
 Usage:
     genpasswd
@@ -119,7 +121,7 @@ Example:
 
 ```
 
-### gifme
+### [gifme](./gifme)
 ```
 Usage:
 gifme [-h]
@@ -146,9 +148,10 @@ requires 'imagemagick' and 'ffmpeg'
 
 Modified from: https://github.com/holman/dotfiles/blob/master/bin/movieme
 
+
 ```
 
-### git/gi
+### [git/gi](./git/gi)
 ```
 https://www.gitignore.io/docs
 get standard gitignore files
@@ -157,23 +160,23 @@ prepends the output with the basic gitignore from git/basic_gitignore
 Modified from: https://github.com/AndrewSB/dotfiles/blob/master/zsh/functions/gi
 ```
 
-### git/gitconfig
+### [git/gitconfig](./git/gitconfig)
 ```
 print your current git configuration
 ```
 
-### git/gitopen
+### [git/gitopen](./git/gitopen)
 ```
 Opens the current git repository in your browser, if you're in one
 ```
 
-### git/gituser
+### [git/gituser](./git/gituser)
 ```
 Prints your git username and email for the current repository
 Used to manage repository specific credentials for different Github accounts
 ```
 
-### moviesearch
+### [moviesearch](./moviesearch)
 ```
 Usage:
     moviesearch MOVIE_NAME... [--help]
@@ -185,13 +188,13 @@ Example:
 
 ```
 
-### mp4convert
+### [mp4convert](./mp4convert)
 ```
 converts all inputs on command line to mp4 files.
 e.g. 720convert pulpfiction.mp4
 ```
 
-### openlinks
+### [openlinks](./openlinks)
 ```
 Usage:
     openlinks LINKS... [--help]
@@ -208,12 +211,12 @@ input 'q', 'quit', or EOF (Ctrl+D) to quit
 
 ```
 
-### set_mac_defaults
+### [set_mac_defaults](./set_mac_defaults)
 ```
 Set macOS defaults
 ```
 
-### ssh-keygen-best-practices
+### [ssh-keygen-best-practices](./ssh-keygen-best-practices)
 ```
 Usage:
     ssh-keygen-best-practices [-h]
@@ -231,9 +234,10 @@ OpenSSH format
 Arguments:
   -h  show help message
 
+
 ```
 
-### todo
+### [todo](./todo)
 ```
 Usage:
     todo some todo
@@ -244,9 +248,10 @@ Usage:
 - any file on the desktop that starts with 'TODO' is recognized as a todo
 - call 'todo --list' to list current todos
 
+
 ```
 
-### tvsearch
+### [tvsearch](./tvsearch)
 ```
 Usage:
     tvsearch TVSHOW_NAME... [--help]
@@ -258,12 +263,12 @@ Example:
 
 ```
 
-### update
+### [update](./update)
 ```
 updates brew, python, and anything from the mac app store
 ```
 
-### usdate
+### [usdate](./usdate)
 ```
 Usage: usdate [-du] [--help]
 
@@ -277,7 +282,7 @@ Prints the date in the US format, because I'm used to the European
 
 ```
 
-### which-cat
+### [which-cat](./which-cat)
 ```
 which-cat SHELL_COMMAND [-h]
 
@@ -287,9 +292,10 @@ prints the contents of the file if it exists, and is readable
 Arguments:
   -h  show help message
 
+
 ```
 
-### yt-dl
+### [yt-dl](./yt-dl)
 ```
 usage: yt-dl [-h] [--open] [--wait] [--name NAME] [--downloads | --tmp]
 

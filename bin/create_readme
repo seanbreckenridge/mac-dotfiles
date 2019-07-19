@@ -61,7 +61,7 @@ with open(output_file, 'w') as readme_f:
     for script_name, script_readme in readme.items():
         readme_f.write(
             f"""
-### {script_name}
+### [{script_name}](./{script_name})
 ```
 {script_readme}
 ```
