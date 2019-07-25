@@ -5,6 +5,9 @@ if [ ! $(which npm) ];then
   exit 1
 fi
 
+# update npm version
+npm install -g npm
+
 npm install --global \
     moby
 
