@@ -10,7 +10,10 @@ export ZDOTDIR="${DOTDIR}/zsh"
 export ZSH_CUSTOM="${ZDOTDIR}/custom"
 
 # locations for additional functions
-export fpath=( "${ZDOTDIR}/functions" ${fpath[@]} )
+export fpath=(
+  "${ZDOTDIR}/functions"
+  ${fpath[@]}
+)
 
 # Path
 PATH="\
@@ -23,6 +26,12 @@ ${DOTDIR}/wrappers:\
 ${HOME}/.cargo/bin:\
 ${PATH}"
 export PATH
+
+# cd autocompletes to these directories
+cdpath=(
+  ~/bin/
+  $cdpath
+)
 
 # Editor
 if [[ -n $SSH_CONNECTION ]]; then
