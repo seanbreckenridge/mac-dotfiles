@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# updates brew, python, and anything from the mac app store
+# updates brew, python, node, and macos
 
 # updating brew
 bash -x "${DOTDIR}/homebrew/install.sh"

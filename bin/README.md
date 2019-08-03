@@ -271,7 +271,7 @@ Example:
 
 ### [update](./update)
 ```
-updates brew, python, and anything from the mac app store
+updates brew, python, node, and macos
 ```
 
 ### [usdate](./usdate)
