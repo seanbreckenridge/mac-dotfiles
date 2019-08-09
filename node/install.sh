@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+#
+# Passing "--verbose" as the first arg will pass it to npm
 
 if [ ! $(which npm) ];then
   echo "npm doesn't exist, can't install global node modules"
@@ -6,9 +8,9 @@ if [ ! $(which npm) ];then
 fi
 
 # update npm version
-npm install -g npm
+npm install -g $1 npm
 
-npm install --global \
+npm install --global $1 \
     moby
 
-npm update -g
+npm update -g $1

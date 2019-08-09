@@ -5,6 +5,8 @@
 # This installs some of the common dependencies needed (or at least desired)
 # using Homebrew.
 #
+# Passing --verbose as the first arg will pass it on to relevant brew functions
+#
 # Source: https://github.com/holman/dotfiles/blob/master/homebrew/install.sh
 
 # Check for Homebrew
@@ -24,9 +26,9 @@ fi
 
 brew tap 'homebrew/bundle'
 brew tap 'caskroom/cask'
-brew update && brew upgrade
+brew update $1 && brew upgrade $1
 brew cask upgrade
-brew bundle --file="$HOMEBREW_BREWFILE"
+brew bundle --file="$HOMEBREW_BREWFILE" $1
 if [[ $(which zsh) == "/bin/zsh" ]]; then
   # /usr/local/bin is first on the path in .zshenv
   # /usr/bin/env should now use brew installed versions

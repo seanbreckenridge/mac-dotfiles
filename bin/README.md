@@ -107,20 +107,6 @@ duration movie.mp4 | cut -d "|" -f 3
 prints everything on your $PATH seperated by newlines
 ```
 
-### [genpasswd](./genpasswd)
-```
-Usage:
-    genpasswd
-    genpasswd PASSWD_LENGTH
-    genpasswd --help
-
-generates a password, prints it and puts it on your clipboard
-
-Example:
-    genpasswd 50 # for a password with length 50
-
-```
-
 ### [gifme](./gifme)
 ```
 Usage:
@@ -217,6 +203,20 @@ type 'q', 'quit', or EOF (Ctrl+D), Ctrl+C to quit
 
 ```
 
+### [pygenpasswd](./pygenpasswd)
+```
+Usage:
+    genpasswd
+    genpasswd PASSWD_LENGTH
+    genpasswd --help
+
+generates a password, prints it and puts it on your clipboard
+
+Example:
+    genpasswd 50 # for a password with length 50
+
+```
+
 ### [set_mac_defaults](./set_mac_defaults)
 ```
 Set macOS defaults
@@ -271,7 +271,8 @@ Example:
 
 ### [update](./update)
 ```
-updates brew, python, node, and macos
+updates macos, brew, python, node
+passing --verbose as the first arg will pass it to each update script
 ```
 
 ### [usdate](./usdate)

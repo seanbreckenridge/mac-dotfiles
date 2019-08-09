@@ -1,17 +1,20 @@
 #!/usr/bin/env bash
 #
-# updates brew, python, node, and macos
+# updates macos, brew, python, node
+#
+# passing --verbose as the first arg will pass it to each update script
+
+
+# # updating macos software/OS updates
+if [[ $(uname -s) == "Darwin" ]]; then
+    sudo softwareupdate -i -a $1
+fi
 
 # updating brew
-bash -x "${DOTDIR}/homebrew/install.sh"
+bash -x "${DOTDIR}/homebrew/install.sh" "$1"
 
 # updating python
-bash -x "${DOTDIR}/python3/install.sh"
+bash -x "${DOTDIR}/python3/install.sh" "$1"
 
 # update global node modules
-bash -x "${DOTDIR}/node/install.sh"
-
-# updating macos software/OS updates
-if [[ $(uname -s) == "Darwin" ]]; then
-  "${DOTDIR}/macos/update.sh" 2>&1
-fi
+bash -x "${DOTDIR}/node/install.sh" "$1"
