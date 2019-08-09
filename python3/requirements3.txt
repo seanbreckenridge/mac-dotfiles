@@ -11,6 +11,7 @@ bpython
 bpython
 bs4
 colorama
+cget
 cube-scramble-cli
 discogs-client
 discogs_client

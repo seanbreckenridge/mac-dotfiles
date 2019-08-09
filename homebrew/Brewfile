@@ -44,6 +44,7 @@ brew 'ruby'
 brew 'rbenv'
 brew 'ruby-build'
 brew 'shfmt' # shell formatting
+brew 'clang-format'
 
 # Apps
 
