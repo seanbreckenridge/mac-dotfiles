@@ -6,8 +6,8 @@
 # followed by the name of the wrapper, and then a command to run
 # the script with, if applicable
 #
-# e.g. wrapper bin/project/script_name.ext script_name
-# e.g. wrapper bin/project/script_name.py script_name python3
+# e.g. wrapper src/project/script_name.ext script_name
+# e.g. wrapper project/script_name.py script_name python3
 
 set -e
 
@@ -17,7 +17,7 @@ this_dir=$(dirname "$0")
 if [[ "$1" == "-h" || "$1" == "--help" || -z "$2" ]]; then
   echo -e "Provide the location of the file you wish to make a wrapper for, followed by the name of the wrapper, and then a command to run the script with, if applicable"
   echo -e "e.g. wrapper bin/project/script_name.ext script_name"
-  echo -e "e.g. wrapper bin/project/script_name.py script_name python3"
+  echo -e "e.g. wrapper project/script_name.py script_name python3"
   exit 1
 fi
 

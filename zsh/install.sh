@@ -20,8 +20,8 @@ if [ ! -f ~/.hushlogin ]; then
   echo -e "This stops the 'Last Login' message when you open a new terminal window." > ~/.hushlogin
 fi
 
-if [ ! -d ~/bin ]; then
-  mkdir ~/bin
+if [ ! -d ~/Dev ]; then
+  mkdir ~/Dev
 fi
 
 # need to add ruby before system ruby, cant do this in .zshenv since

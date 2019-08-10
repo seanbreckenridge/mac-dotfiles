@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 #
-# Creates a backup of my ~/bin directory (where I store all my code)
+# Creates a backup of my ~/Dev directory (where I store all my code)
 #
 # assumes 'copy_to_directory' auto-syncs somewhere
 # e.g. with Google Drive, Dropbox or MEGAsync
 
-directories_to_backup=("${HOME}/bin")
+directories_to_backup=("${HOME}/Dev")
 copy_to_directory="${HOME}/Google Drive/code_backups"
 temp_backup_dir="/tmp/code_backups" # make sure doesnt end with backslash
 

@@ -28,7 +28,7 @@ Example usage:
 
 ### [backup](./backup)
 ```
-Creates a backup of my ~/bin directory (where I store all my code)
+Creates a backup of my ~/Dev directory (where I store all my code)
 assumes 'copy_to_directory' auto-syncs somewhere
 e.g. with Google Drive, Dropbox or MEGAsync
 ```

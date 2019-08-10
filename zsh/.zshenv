@@ -17,7 +17,6 @@ export fpath=(
 
 # Path
 PATH="\
-/usr/local/opt/coreutils/libexec/gnubin:\
 /usr/local/bin:\
 ${HOME}/Library/Python/3.7/bin:\
 ${DOTDIR}/bin:\
@@ -29,7 +28,7 @@ export PATH
 
 # cd autocompletes to these directories
 cdpath=(
-  ~/bin/
+  "${HOME}/Dev/"
   $cdpath
 )
 
