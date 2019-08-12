@@ -30,7 +30,7 @@ brew update $1 && brew upgrade $1
 brew cask upgrade
 brew bundle --file="$HOMEBREW_BREWFILE" $1
 # run greedy upgrade
-python3 "${DOTDIR}/homebrew/greedy_upgrade.py" && echo "Its been a month since 'brew cask upgrade --greedy' ran, running now..." && brew cask upgrade --greedy
+python3 "${DOTDIR}/homebrew/greedy_upgrade.py" && brew cask upgrade --greedy $1
 
 if [[ $(which zsh) == "/bin/zsh" ]]; then
   # /usr/local/bin is first on the path in .zshenv
