@@ -30,3 +30,7 @@ Desktop.ini
 !/wrappers/wrapper
 
 __pycache__/
+
+# homebrew greedy updater
+
+homebrew/last_greedy_upgrade.json
