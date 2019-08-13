@@ -23,6 +23,7 @@ ${DOTDIR}/bin:\
 ${DOTDIR}/bin/git:\
 ${DOTDIR}/wrappers:\
 ${HOME}/.cargo/bin:\
+$HOME/.composer/vendor/bin:\
 ${PATH}"
 export PATH
 
