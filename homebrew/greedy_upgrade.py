@@ -57,4 +57,4 @@ if __name__ == "__main__":
         print(f"There was an error reading from '{last_greedy_upgrade_filepath}', removing...",
               file=sys.stderr)
         os.remove(last_greedy_upgrade_filepath)
-        sys.exit(0)  # run greedy upgrade
+        sys.exit(run_greedy_upgrade())  # run greedy upgrade
