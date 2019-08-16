@@ -10,7 +10,4 @@ ${DOTDIR}/bin/todo --list
 # (your private keys) to the ssh-agent
 
 eval `ssh-agent` > /dev/null
-find "${HOME}/.ssh" -type file | \
-    grep -v known_hosts | \
-    grep -v "\\.pub$" | \
-    xargs -I {} ssh-add -q "{}"
+find "${HOME}/.ssh" -type f -not -name known_hosts -not -name "*\\.pub" | xargs -I {} ssh-add -q "{}"
