@@ -57,6 +57,7 @@ cask 'mysqlworkbench'
 cask 'java'
 cask 'adoptopenjdk8'
 cask 'phantomjs'
+cask 'iterm2'
 
 ## Social
 cask 'slack'
