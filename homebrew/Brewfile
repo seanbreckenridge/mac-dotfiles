@@ -82,6 +82,7 @@ cask 'spotify'
 
 ## Utitlties
 cask 'flycut' # clipboard manager
+cask 'db-browser-for-sqlite' # sqlite3 GUI
 cask 'megasync' # mega.nz
 cask 'soundflower' # audio redirection
 cask 'speedify' # VPN
