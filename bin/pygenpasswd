@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 
 """Usage:
-    genpasswd
-    genpasswd PASSWD_LENGTH
-    genpasswd --help
+    pygenpasswd
+    pygenpasswd PASSWD_LENGTH
+    pygenpasswd --help
 
 generates a password, prints it and puts it on your clipboard
 
 Example:
-    genpasswd 50 # for a password with length 50
+    pygenpasswd 50 # for a password with length 50
 """
 
 import random
