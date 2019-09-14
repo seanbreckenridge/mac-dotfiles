@@ -206,14 +206,14 @@ type 'q', 'quit', or EOF (Ctrl+D), Ctrl+C to quit
 ### [pygenpasswd](./pygenpasswd)
 ```
 Usage:
-    genpasswd
-    genpasswd PASSWD_LENGTH
-    genpasswd --help
+    pygenpasswd
+    pygenpasswd PASSWD_LENGTH
+    pygenpasswd --help
 
 generates a password, prints it and puts it on your clipboard
 
 Example:
-    genpasswd 50 # for a password with length 50
+    pygenpasswd 50 # for a password with length 50
 
 ```
 
