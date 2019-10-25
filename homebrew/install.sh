@@ -23,7 +23,7 @@ then
 fi
 
 brew tap 'homebrew/bundle'
-brew tap 'homebrew/cask-cask'
+brew tap 'homebrew/homebrew-cask'
 brew update $1 && brew upgrade $1
 brew cask upgrade
 brew bundle --file="$HOMEBREW_BREWFILE" $1

@@ -46,8 +46,8 @@ brew 'ruby-build'
 brew 'shfmt' # shell formatting
 brew 'clang-format'
 brew 'composer'
+brew 'rust'
 
-# Apps
 
 ## Code
 cask 'atom'
