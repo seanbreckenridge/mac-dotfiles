@@ -1,4 +1,4 @@
-# first dotfile to be loaded - define environment variables
+# first dotfile to be loaded - define zsh environment variables
 
 # the dotfiles directory
 export DOTDIR="${HOME}/dotfiles"

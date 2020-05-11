@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Sets global name and email config, set default editor to nano
+# Sets global name and email config, set default editor to nvim
 
 # check for global name config
 if [[ -z $(git config --global user.name) ]]; then
@@ -16,6 +16,6 @@ if [[ -z $(git config --global user.email) ]]; then
   git config --global user.email "$githubemail"
 fi
 
-git config --global core.editor nano
+git config --global core.editor nvim
 
 git config --list | cat

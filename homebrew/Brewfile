@@ -48,6 +48,8 @@ brew 'clang-format'
 brew 'composer'
 brew 'rust'
 brew 'shellcheck'
+brew 'neovim'
+brew 'fzf'
 
 ## Code
 cask 'atom'
