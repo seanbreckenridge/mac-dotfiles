@@ -47,7 +47,7 @@ brew 'shfmt' # shell formatting
 brew 'clang-format'
 brew 'composer'
 brew 'rust'
-
+brew 'shellcheck'
 
 ## Code
 cask 'atom'
