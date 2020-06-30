@@ -1,5 +1,11 @@
 # dotfiles
 
+This repo is not updated anymore, my [dotfiles](https://github.com/seanbreckenridge/dotfiles) repo works on MacOS/Linux. It checks the OS and installs packages properly; calls out to wrapper scripts to handle cross platform functionality.
+
+
+-- OLD README BELOW --
+-------
+
 there are many `dotfiles`, but these are mine.
 
  My `dotfiles` directory sits at `~/dotfiles`, each directory includes an relevant `install.sh` file, you can run all of them by running [`./setup`](./setup).
