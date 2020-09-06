@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #
-# prints everything on your $PATH seperated by newlines
+# prints everything on your $PATH separated by newlines
 
 echo "$PATH" | tr ":" "\n"

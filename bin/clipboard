@@ -19,5 +19,5 @@ try:
     pyperclip.copy(buffer)
     print("Copied {} characters to the clipboard".format(len(buffer)))
 except KeyboardInterrupt:
-    print("\nRecieved exit signal, exiting without copying anything to clipboard")
+    print("\nReceived exit signal, exiting without copying anything to clipboard")
     sys.exit(0)
